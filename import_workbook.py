@@ -158,16 +158,23 @@ def consolidate(candidates):
 def merge_library(current, candidates, sheet_counts):
     result = copy.deepcopy(current)
     existing = {g['id']: g for g in current['games']}
+    editions = {e['id']: e for g in current['games'] for e in g.get('mergedEditions', [])}
     appended = []
     for record in consolidate(candidates):
+        if record['id'] in editions:
+            old = editions[record['id']]
+            if old['title'] != record['title'] or old.get('sourceRow') != record['sourceRow']:
+                raise ValueError(f'統合済みIDと別の作品が衝突: {record["id"]}')
+            continue
         if record['id'] in existing:
             old = existing[record['id']]
-            if old['title'] != record['title'] or old.get('sourceRow') != record['sourceRow']:
+            original_title = old.get('originalCatalog', {}).get('title', old['title'])
+            if record['title'] not in {old['title'], original_title} or old.get('sourceRow') != record['sourceRow']:
                 raise ValueError(f'既存IDと別の作品が衝突: {record["id"]}')
             continue
         result['games'].append(record)
         appended.append(record)
-    result['platforms'] = PLATFORMS
+    result['platforms'] = {**PLATFORMS, **result.get('platforms', {})}
     result['families'] = FAMILIES
     result['sourceName'] = 'ROMリスト.xlsx'
     result['importSummary'] = {'sheetRows': sheet_counts, 'emptySheets': [s for s, n in sheet_counts.items() if not n],
