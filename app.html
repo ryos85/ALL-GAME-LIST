@@ -79,7 +79,7 @@ function editionRecords(g){const records=[...(g.preConsolidationPersonal?[{title
 function familyOf(g){return platformInfo[g.platform]?.family||g.family||(g.platform==='NGPC'?'NGP':g.platform);}
 function platformMatches(g,value){return !value||(value.startsWith('maker:')?platformMaker(g)===value.slice(6):value.startsWith('family:')?familyOf(g)===value.slice(7):g.platform===value);}
 const MAKERS={nintendo:{name:'任天堂',families:['FC','FDS','SFC','N64','GC','Wii','WII','WiiU','WIIU','GB','GBA','NDS','DS','3DS','Switch','SWITCH','Switch2','SWITCH2']},sony:{name:'ソニー',families:['PS','PS1','PS2','PS3','PS4','PS5','PSP','PSV','VITA']},sega:{name:'セガ',families:['SG1000','SG-1000','MK3','SMS','MD','GG','SS','DC']},'nec-hudson':{name:'NEC・ハドソン',families:['PCE','PC-FX','PCFX']},snk:{name:'SNK',families:['NG','NGCD','NGP']},bandai:{name:'バンダイ',families:['WS']},other:{name:'その他',families:[]}};
-const HARDWARE_NAMES={PS:'PlayStation',PS2:'PlayStation 2',PS3:'PlayStation 3',PSP:'PlayStation Portable（PSP）',PSV:'PlayStation Vita'};
+const HARDWARE_NAMES={PS:'PlayStation',PS2:'PlayStation 2',PS3:'PlayStation 3',PSP:'PlayStation Portable',PSV:'PlayStation Vita'};
 const CATEGORY_NAMES={NGP:'モノクロ',NGPC:'カラー',WS:'モノクロ',WSC:'カラー',PCE:'HuCard','PCE-CD':'CD-ROM²','PCE-SCD':'SUPER CD-ROM²','PCE-ACD':'アーケードカード専用',SGX:'スーパーグラフィックス専用','PCE-GE':'GAMES EXPRESS CD CARD専用',MD:'通常ソフト',MCD:'メガCD','32X':'スーパー32X',GB:'モノクロ','GB-GBC':'モノクロ・カラー共通',GBC:'カラー専用',N64:'通常ソフト','N64-DD':'64DD専用',NDS:'通常ソフト',DSi:'DSi専用・DSiウェア','3DS':'通常ソフト','3DS-VC':'バーチャルコンソール',New3DS:'New 3DS専用','New3DS-VC':'New 3DS専用 バーチャルコンソール'};
 function makerOfFamily(family){return Object.keys(MAKERS).find(key=>MAKERS[key].families.includes(family))||'other';}
 function platformMaker(g){return makerOfFamily(familyOf(g));}
@@ -96,12 +96,12 @@ function platformOptions(){
   const families=Object.keys(familyInfo).filter(f=>makerOfFamily(f)===maker);if(!families.length)continue;
   const total=Object.entries(counts).reduce((n,[code,count])=>n+(makerOfFamily(platformInfo[code]?.family||code)===maker?count:0),0);
   options+='<optgroup label="'+esc(info.name)+'"><option value="maker:'+maker+'">'+esc(info.name)+'</option>';
-  tree+='<details class="hardware-company" data-maker="'+maker+'"><summary>'+esc(info.name)+'<span>'+total.toLocaleString('ja-JP')+'本</span></summary><div class="hardware-children">'+choice('maker:'+maker,info.name+'のすべて',total);
+  tree+='<details class="hardware-company" data-maker="'+maker+'"><summary>'+esc(info.name)+'<span>'+total.toLocaleString('ja-JP')+'本</span></summary><div class="hardware-children">'+choice('maker:'+maker,'全機種',total);
   for(const family of families){
    const codes=Object.keys(platformInfo).filter(p=>platformInfo[p].family===family),count=codes.reduce((n,p)=>n+(counts[p]||0),0);
    options+='<option value="family:'+esc(family)+'"'+(!count?' disabled':'')+'>'+esc(familyInfo[family])+'</option>';
    tree+='<details class="hardware-family"><summary>'+esc(familyInfo[family])+'<span>'+(count?count.toLocaleString('ja-JP')+'本':'未登録')+'</span></summary><div class="hardware-categories">';
-   if(codes.filter(code=>counts[code]).length>1)tree+=choice('family:'+family,'すべてのカテゴリ',count);
+   if(codes.filter(code=>counts[code]).length>1)tree+=choice('family:'+family,'全カテゴリ',count);
    for(const code of codes){options+='<option value="'+esc(code)+'"'+(!counts[code]?' disabled':'')+'>'+esc(PLATFORM[code])+'</option>';tree+=counts[code]?choice(code,categoryName(code),counts[code]):'<div class="hardware-empty">'+esc(categoryName(code))+'<span>未登録</span></div>';}
    tree+='</div></details>';
   }
