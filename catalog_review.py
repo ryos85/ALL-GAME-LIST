@@ -149,7 +149,17 @@ def render_report(report):
     completion_heading=''
     if completion:
         status=report['summary']
-        completion_heading='<p><strong>対応完了 '+str(completion['completedItems'])+'件 ／ 未対応 '+str(completion['pendingItems'])+'件</strong>　追加 '+str(completion['added'])+'本・統合 '+str(completion['merged'])+'件・通番更新 '+str(completion['numberedGames'])+'本</p><p>発売日未確定 '+str(completion['uncertainDates'])+'作品：調査結果と資料の相違を記載しています。「完了」は処理の完了を示し、日付の確定を意味しません。</p>'
+        completion_heading='<p><strong>対応完了 '+str(completion['completedItems'])+'件 ／ 未対応 '+str(completion['pendingItems'])+'件</strong>　追加 '+str(completion['added'])+'本・統合 '+str(completion['merged'])+'件・通番更新 '+str(completion['numberedGames'])+'本</p><p><a href="#unresolved-dates">発売日未確定 '+str(completion['uncertainDates'])+'作品の一覧</a>。「完了」は処理の完了を示し、日付の確定を意味しません。</p>'
+    unresolved=[]
+    for row in report['rows']:
+        verification=row.get('verification',{})
+        if verification.get('grade')=='unresolved' and not row.get('mergedInto'):
+            unresolved.append(dict(family=row['family'],title=row['title'],date=row['date'],
+                                   note=verification['note'],sources=verification.get('sources',[])))
+    if unresolved:
+        if completion and len(unresolved)!=completion['uncertainDates']:
+            raise ValueError('発売日未確定の件数と一覧が一致しません。')
+        groups='<section id="unresolved-dates"><h2>発売日未確定 — '+str(len(unresolved))+'作品</h2><p>資料の相違や情報不足が残る作品です。下の日付は確定した発売日ではありません。</p>'+table(unresolved,[('family','機種'),('title','作品'),('date','並び順用の記録'),('note','未確定の理由')])+'</section>'+groups
     return '<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>発売情報の確認結果</title><style>body{font:14px/1.6 system-ui,sans-serif;color:#172b42;margin:20px}h1{font-size:22px}h2{font-size:17px;margin:24px 0 6px}p{margin:8px 0}table{border-collapse:collapse;width:100%;font-size:12px}td,th{padding:6px 8px;text-align:left;border:1px solid #d6dee8;vertical-align:top}th{background:#edf2f8}td:nth-child(-n+3),th:nth-child(-n+3){white-space:nowrap}td:nth-child(4){min-width:180px}td:nth-child(5){min-width:75px}td:nth-child(6){min-width:130px}td:nth-child(7){min-width:250px}tr:nth-child(even){background:#f8fafc}a{color:#24558b;white-space:nowrap}.scroll{overflow:auto}ul{padding-left:20px}</style><h1>発売情報の確認結果</h1>'+completion_heading+'<p>2026年9月7日／'+str(report['beforeCount'])+'本を一覧照合。補完後 '+str(report['afterCount'])+'本。</p><p>'+esc(' ／ '.join(k+': '+str(v)+'本' for k,v in status.items()))+'</p><details><summary>照合範囲と発売日の扱い</summary><ul>'+''.join('<li>'+esc(s)+'</li>' for s in report['limitations'])+'</ul></details>'+groups+'</html>'
 
 def main():
