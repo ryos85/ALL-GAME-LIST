@@ -1,0 +1,10 @@
+/library.json
+/library.previous.json
+/device-key.json
+/local-settings.json
+/スマホ専用URL.txt
+/server.log
+/__pycache__/
+*.tmp
+*.log
+/保存動作検証-*/
