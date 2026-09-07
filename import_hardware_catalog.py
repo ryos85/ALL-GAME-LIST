@@ -19,7 +19,8 @@ CHECKED = '2026-09-07'
 FAMILIES = {'N64':'ニンテンドウ64','GC':'ゲームキューブ','NDS':'ニンテンドーDS',
             '3DS':'ニンテンドー3DS','PS':'プレイステーション','PS2':'プレイステーション2',
             'PS3':'プレイステーション3','PSP':'プレイステーション・ポータブル',
-            'PSV':'PlayStation Vita','GG':'ゲームギア','PC-FX':'PC-FX'}
+            'PSV':'PlayStation Vita','GG':'ゲームギア','PC-FX':'PC-FX',
+            'SFC':'スーパーファミコン','SS':'セガサターン','DC':'ドリームキャスト'}
 FAMITSU_CODES = dict(zip(['n64','cube','ds','3ds','ps','ps2','ps3','psp','psv','gg','pcfx'], FAMILIES))
 EDITION = re.compile(r'限定|同梱|パック|セット|BOX|ボックス|コレクター|プレミアム|LIMITED|PACK|SET|パッケージ|特典|Best|ベスト|べすと|定番|殿堂|カプコレ|PS\s*one\s*Books|廉価|価格|プライス|PRICE|VALUE|バリュ|割引|キャンペーン|マル得|お買い得|お得|再発売|Super\s*Lite|スーパーライト|Major\s*Wave|Mejor\s*Wave|マル安|ポップ.?コレクション|円|TAITO2000|Magical\s*1500|Choice|復刻|テクコレ|サンコレ|ヒッツ|HITS|セレクト|セレクション|ミレニアム.?コレクション|なつコレ|夏キャン|IFコレクション|ぽっきり|EPV|ライブラリー|サマーチャンス|シスコン.?ゲームギャラリー|エビコレ|アニバーサリー|三昧シリーズ|アスキー.?カジュアルコレクション|ビクターホラーコレクション|エンターブレイン.?コレクション|キーボード|コントローラ|ガンコン|ジョグコン|マイク|携帯電話接続|ポケットステーションもいっしょ|サンリオ流通',re.I)
 EXCLUDE_TITLE = re.compile(r'追加コンテンツ|ダウンロードコンテンツ|\bDLC\b|追加楽曲|シーズンパス|体験版|更新データ|デジコロ|どこぽんちょいす|データ移行アプリ|予告編|ハンドル for|^アニメ 蒼き雷霆|^LEGO.*ムービー 3D$',re.I)
@@ -27,6 +28,9 @@ EXTRA_EDITION = re.compile(r'D-Collection|EA[:：]SY|プラチナ.?リミテッ�
 HARDWARE_TITLE = re.compile(r'^(?:PlayStation\s*(?:3\b|Vita\b)|プレイステーション[３3]|プレイステーション[・･]?ポータブル|ニンテンドー3DS(?:\s*[（(]|\s+LL)|ニンテンドーDS\s*(?:Lite|i\b)|ワイヤレスコントローラー|PSP-\d)',re.I)
 PLATFORMS = {code:{'name':name,'badge':code,'family':code} for code,name in FAMILIES.items()}
 PLATFORMS.update({
+    'SFC-NP': {'name':'スーパーファミコン ニンテンドウパワー専用','badge':'SFC NP','family':'SFC'},
+    'SFC-TURBO': {'name':'スーファミターボ専用','badge':'スーファミターボ','family':'SFC'},
+    'DC-VM': {'name':'ドリームキャスト ビジュアルメモリ内蔵ソフト','badge':'DC VM','family':'DC'},
     'N64-DD': {'name':'ニンテンドウ64・64DD専用','badge':'64DD','family':'N64'},
     'DSi': {'name':'ニンテンドーDSi専用・DSiウェア','badge':'DSi専用','family':'NDS'},
     'New3DS': {'name':'Newニンテンドー3DS専用','badge':'New 3DS専用','family':'3DS'},
@@ -271,7 +275,7 @@ def merge_sources(base,extra):
 def make_game(r):
     code=r['platform']
     # Source-based stable identity keeps notes attached if title spelling changes.
-    identity='famitsu:'+str(r.get('famitsuItem',r['famitsuGroup'])) if r.get('famitsuGroup') else 'nintendo:'+r['nintendoId'] if r.get('nintendoId') else title_key(r['title'])
+    identity=r['catalogId'] if r.get('catalogId') else 'famitsu:'+str(r.get('famitsuItem',r['famitsuGroup'])) if r.get('famitsuGroup') else 'nintendo:'+r['nintendoId'] if r.get('nintendoId') else title_key(r['title'])
     gid='catalog-'+code.lower()+'-'+hashlib.sha256(identity.encode()).hexdigest()[:16]
     return {'id':gid,'title':r['title'],'family':PLATFORMS[code]['family'],'platform':code,
             'releaseDate':r['releaseDate'],'publisher':r.get('publisher') or '未確認',
@@ -281,7 +285,7 @@ def make_game(r):
             'classificationNote':'国内の発売記録から追加。通常版・廉価版・限定パッケージは同一機種内で統合。',
             'classificationSources':r['sources'],'releaseDateSources':r['sources'],
             'releaseDateVerification':{'grade':r['grade'],'checkedAt':CHECKED,'note':'参照資料の発売日を採用。','sources':r['sources']},
-            'catalogVariants':r.get('variants',[]),'catalogImport':'additional-hardware-2026-09',
+            'catalogReview':r.get('catalogReview',[]),'catalogVariants':r.get('variants',[]),'catalogImport':'additional-hardware-2026-09',
             'aliases':list(dict.fromkeys([v['title'] for v in r.get('variants',[])])),
             'distribution':r.get('distribution','package')}
 
@@ -322,6 +326,9 @@ def main():
             if r['platform']=='New3DS-VC' or (r['platform']=='New3DS' and r['title'].startswith('密着対戦')):
                 base.append(r)
         base=consolidate_exact(attach_details(base,args.build_cache))
+        if (args.build_cache/'sfc_index.html').exists():
+            from import_remaining_hardware import three_hardware_records
+            base += three_hardware_records(args.build_cache)
         (args.build_cache/'unmatched.json').write_text(json.dumps(unmatched,ensure_ascii=False,indent=2),encoding='utf8')
         SNAPSHOT.write_text(json.dumps({'checkedAt':CHECKED,'scope':'国内発売作品。通常版・再販・限定パッケージを統合。DSi専用・New 3DS専用・3DS VCは別区分。海外版、追加コンテンツ、PS系の旧機種互換配信は除外。','games':base},ensure_ascii=False,indent=2),encoding='utf8')
         print('Base:',dict(Counter(r['platform'] for r in base)),'Unmatched supplements:',dict(Counter(r['platform'] for r in unmatched)))

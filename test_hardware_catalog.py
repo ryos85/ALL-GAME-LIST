@@ -58,12 +58,17 @@ class HardwareCatalogTests(unittest.TestCase):
         ids=[catalog.make_game(r)['id'] for r in rows]
         self.assertEqual(len(ids),len(set(ids)))
         allowed={'www.famitsu.com','www.nintendo.co.jp','www.sega.jp','www.super-famicom.jp',
-                 'www.gavas.jp','tk-nz.game.coocan.jp'}
+                 'www.gavas.jp','tk-nz.game.coocan.jp','super-famicom.jp'}
         for r in rows:
             self.assertEqual(catalog.date(r['releaseDate']),r['releaseDate'])
             self.assertTrue(r['title'].strip())
             self.assertNotIn('【海外',r['title'])
-            self.assertFalse(catalog.EXCLUDE_TITLE.search(r['title']),r['title'])
+            # This is a separately sold Saturn title, despite "preview" in its name.
+            if r['title']=='だいな あいらん 予告編':
+                self.assertEqual(r['platform'],'SS')
+                self.assertEqual(r['grade'],'official')
+            else:
+                self.assertFalse(catalog.EXCLUDE_TITLE.search(r['title']),r['title'])
             self.assertNotEqual(r['genre'],'本体・周辺商品')
             for source in r['sources']:self.assertIn(urlparse(source).hostname,allowed)
         self.assertEqual(sum(r['platform']=='GG' for r in rows),196)
