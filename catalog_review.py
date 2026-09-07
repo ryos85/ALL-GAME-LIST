@@ -142,7 +142,7 @@ def render_report(report):
     groups=''
     for kind in ['登録漏れ','発売日','タイトル','再販・別版','収録範囲']:
         selected=[r for r in report['issues'] if r['kind']==kind]
-        groups+='<section><h2>'+esc(kind)+' — '+str(len(selected))+'件</h2>'+table(selected,[('status','判定'),('family','機種'),('title','作品'),('before','登録内容'),('after','確認結果')])+'</section>'
+        groups+='<section><h2>'+esc(kind)+' — '+str(len(selected))+'件</h2>'+table(selected,[('status','判定'),('family','機種'),('title','作品'),('before','登録内容'),('after','採用内容'),('note','理由')])+'</section>'
     status=collections.Counter(r['status'] for r in report['rows'])
     return '<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>発売情報の確認結果</title><style>body{font:14px/1.6 system-ui,sans-serif;color:#172b42;margin:20px}h1{font-size:22px}h2{font-size:17px;margin:24px 0 6px}p{margin:8px 0}table{border-collapse:collapse;width:100%;font-size:12px}td,th{padding:6px 8px;text-align:left;border:1px solid #d6dee8;vertical-align:top}th{background:#edf2f8}tr:nth-child(even){background:#f8fafc}a{color:#24558b;white-space:nowrap}.scroll{overflow:auto}ul{padding-left:20px}</style><h1>発売情報の確認結果</h1><p>2026年9月7日／'+str(report['beforeCount'])+'本を一覧照合。補完後 '+str(report['afterCount'])+'本。</p><p>'+esc(' ／ '.join(k+': '+str(v)+'本' for k,v in status.items()))+'</p><ul>'+''.join('<li>'+esc(s)+'</li>' for s in report['limitations'])+'</ul>'+groups+'</html>'
 
