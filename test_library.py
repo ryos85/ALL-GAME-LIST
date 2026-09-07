@@ -38,7 +38,7 @@ class LibraryTests(unittest.TestCase):
         book = openpyxl.load_workbook(r'D:\EmuGame\ROMリスト.xlsx',read_only=True,data_only=True)
         original = [row for row in book['ネオジオポケット'].iter_rows(min_row=2,values_only=True) if row[6]]
         book.close()
-        games=self.initial['games']
+        games=[g for g in self.initial['games'] if g['id'].startswith('ngp-')]
         self.assertEqual(len(games),82)
         self.assertEqual(len({g['id'] for g in games}),82)
         for g,row in zip(games,original):
