@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "checkedAt": "2026-09-07",
-  "scope": "先行登録。クロノとサクラ大戦の本編を中心に、確認済みの関係だけを登録。",
+  "scope": "登録済みタイトルのシリーズを照合。他機種版・リメイクは作品ごとの明示的な対応表で関連付け。同名だけの自動関連付けは行わない。",
   "series": [
     {
       "id": "chrono",
@@ -21,22 +21,971 @@
       "id": "sakura",
       "name": "サクラ大戦",
       "games": [
-        "catalog-ss-e581f1cd8b43f7e4",
-        "catalog-dc-cd145d40459f3477",
-        "catalog-ss-a05834f5e5a0835f",
-        "catalog-dc-46ef2f719c10943a",
-        "catalog-dc-502a5020b78ffaf8",
-        "catalog-ps2-68e75494e7f2dc48",
-        "catalog-dc-760ec134668b3afd",
+        "gb-1052",
+        "gb-1250",
         "catalog-ps2-04859c68ce4b7c96",
+        "catalog-ps2-89bb4a14706b6d5a",
+        "catalog-ps2-8c43385365320591",
+        "catalog-ps2-68e75494e7f2dc48",
         "catalog-ps2-d05c965b041dbdf1",
-        "catalog-psp-37627349bcb4fdb5"
+        "catalog-psp-37627349bcb4fdb5",
+        "catalog-nds-3c9f5ee658a748f0",
+        "catalog-ss-e581f1cd8b43f7e4",
+        "catalog-ss-b96c323671779067",
+        "catalog-ss-4a8a4554e96976b7",
+        "catalog-ss-a05834f5e5a0835f",
+        "catalog-ss-5b43461ee21d03bc",
+        "catalog-dc-2ebf42f449f24a06",
+        "catalog-dc-cd145d40459f3477",
+        "catalog-dc-46ef2f719c10943a",
+        "catalog-dc-a29f1eca6e97668c",
+        "catalog-dc-502a5020b78ffaf8",
+        "catalog-dc-b86112937c08ed48",
+        "catalog-dc-d2fdb6875a83904f",
+        "catalog-dc-760ec134668b3afd"
       ],
       "sources": [
         "https://sakura-taisen.com/archives/game/nenpyou/index.html",
         "https://sakura-taisen.com/archives/game/3ps2/system.html",
         "https://sakura-taisen.com/archives/game/atsuki/faq.html",
         "https://sakura-taisen.com/archives/game/psp/faq_frame.html"
+      ]
+    },
+    {
+      "id": "ff",
+      "name": "ファイナルファンタジー",
+      "games": [
+        "ws-001",
+        "ws-107",
+        "ws-111",
+        "ws-136",
+        "ws-168",
+        "gb-195",
+        "gba-321",
+        "gba-354",
+        "gba-588",
+        "gba-752",
+        "gba-790",
+        "gba-791",
+        "catalog-ps-f9b95ed03aaac8b4",
+        "catalog-ps-f7cbea6a00d601a5",
+        "catalog-ps-ebfaa015592329cc",
+        "catalog-ps-8c05de57a497bd20",
+        "catalog-ps-e89a62d746c6bbd3",
+        "catalog-ps-d349854333da7366",
+        "catalog-ps-10521cf2f2532ec3",
+        "catalog-ps-24d3356acb0b1139",
+        "catalog-ps-46e31e16fbc8d102",
+        "catalog-ps-304945a9eab807cd",
+        "catalog-ps-ac9e9c32130eeec8",
+        "catalog-ps-7c2425dc28c9692f",
+        "catalog-ps-415fac081c3c0f20",
+        "catalog-ps-628264b4e9b8e55a",
+        "catalog-ps2-cda66fa262490728",
+        "catalog-ps2-24d23a3036425e77",
+        "catalog-ps2-81a8c7c03613e245",
+        "catalog-ps-5bea890f0cf9bc31",
+        "catalog-ps-7cd5b7673cf9baac",
+        "catalog-ps-8ad56ed2609e8d65",
+        "catalog-ps2-b3404c8f2beb3dd3",
+        "catalog-ps2-6db72350bbc158ed",
+        "catalog-ps2-dec72b6e4dbee735",
+        "catalog-gc-5195d86deecf05a5",
+        "catalog-ps2-0d4cb1d9cc2459be",
+        "catalog-ps2-38f83913142c7b7c",
+        "catalog-ps2-a718549914a62659",
+        "catalog-ps2-31db71d98108214c",
+        "catalog-ps2-59df6e62151ac494",
+        "catalog-ps2-9ab4e192da6ba33e",
+        "catalog-ps2-5aa002e6faadc4d4",
+        "catalog-psp-3daceb7f1b4bde4a",
+        "catalog-nds-19152374163bbce1",
+        "catalog-nds-d93ce353f35a480b",
+        "catalog-psp-7d9301d2a2d2da4c",
+        "catalog-nds-e705e5f7e3e4ae3f",
+        "catalog-psp-3dbeedb553f4a9c0",
+        "catalog-psp-deff5f819f29673c",
+        "catalog-ps2-1ef06d2b5e56bdbc",
+        "catalog-nds-e6136264466201fe",
+        "catalog-psp-db0028317e639aea",
+        "catalog-nds-a0d895ac3e632ee4",
+        "catalog-ps2-a4ea969b22d42a33",
+        "catalog-ps2-67364e8e393a8be3",
+        "catalog-nds-03b1adfd5ce6bf5d",
+        "catalog-ps3-944ca866061e7912",
+        "catalog-psp-4320deb57e4e57ab",
+        "catalog-nds-c54479baeaf05741",
+        "catalog-nds-8b8a4b167c48f6b2",
+        "catalog-psp-ae4b856c6faa73b5",
+        "catalog-nds-46c4c1bcb917d54f",
+        "catalog-nds-5ee87e94d319751d",
+        "catalog-psp-fb1c855b7efa4563",
+        "catalog-ps2-4738a1f99d08b14a",
+        "catalog-ps3-f5ce23662c38ca3a",
+        "catalog-psp-137ee7583ba06a93",
+        "catalog-psp-edc45463a3fbb2cf",
+        "catalog-psp-3d4db41815fa3c12",
+        "catalog-psp-e9c748157279bc9a",
+        "catalog-ps3-b7d1df67d8cfc8eb",
+        "catalog-3ds-bcdf86ae82edc37e",
+        "catalog-psv-0c35faf377fa0971",
+        "catalog-psp-428ed7126fa2757f",
+        "catalog-ps2-bfd5a52aca1867e3",
+        "catalog-ps3-75c5b62a38af156a",
+        "catalog-ps3-016d1a64fcb68f0e",
+        "catalog-psv-555014ff4ded47ff",
+        "catalog-psv-3dd9344026986ec9",
+        "catalog-psv-b9f1abf3a61d3a80",
+        "catalog-psv-8b1611101d912be8",
+        "catalog-3ds-vc-fc24b7aef416f35d",
+        "catalog-3ds-vc-60c123fbce78c23b",
+        "catalog-3ds-c2e54e1bae49036e",
+        "catalog-3ds-65da1343570f16aa",
+        "catalog-3ds-7b9bc90a7e30cd7b",
+        "catalog-psv-a0385668ee0cdcf8",
+        "catalog-psv-c894a09258472125",
+        "catalog-3ds-b6f582919da39a14",
+        "catalog-new3ds-vc-2ed68a5b7a7b7b04",
+        "catalog-new3ds-vc-e5c92206bf24e5ae",
+        "catalog-new3ds-vc-e51e938be38afa3d",
+        "catalog-psv-ab420ebb7530ce09",
+        "catalog-sfc-9c10b1739bcfd6b3",
+        "catalog-sfc-7aa18ebf4ef7ae04",
+        "catalog-sfc-401e1c0972a2e61f",
+        "catalog-sfc-8177a9ea2e8eedee"
+      ],
+      "sources": [
+        "https://jp.finalfantasy.com/histories"
+      ]
+    },
+    {
+      "id": "dq",
+      "name": "ドラゴンクエスト",
+      "games": [
+        "gb-773",
+        "gb-904",
+        "gb-1125",
+        "gb-1167",
+        "gb-1188",
+        "gba-119",
+        "gba-377",
+        "gba-457",
+        "gba-568",
+        "catalog-ps-58a97e8eedf8ee31",
+        "catalog-ps-08d618d698c1fc16",
+        "catalog-ps-c69e296638d83060",
+        "catalog-ps-2eac619024b17159",
+        "catalog-ps2-87a122da833281dd",
+        "catalog-ps2-81a7a0a890d0b05b",
+        "catalog-ps2-afd4994821f6ab72",
+        "catalog-ps2-a718549914a62659",
+        "catalog-nds-f0ebc8a4ef92a30a",
+        "catalog-ps2-c7750aea496a26b6",
+        "catalog-psp-3daceb7f1b4bde4a",
+        "catalog-nds-98531f3895451af3",
+        "catalog-nds-7d0db459f5721a6e",
+        "catalog-nds-b0d4cc6c210bc752",
+        "catalog-nds-ed3137cc47a8ac83",
+        "catalog-nds-5ae496026f5e7ace",
+        "catalog-nds-e5add66964bebcdb",
+        "catalog-nds-4fc5b0c5594d3777",
+        "catalog-dsi-93bafdf640953482",
+        "catalog-nds-d4e716c3c7a680ad",
+        "catalog-3ds-32b83bd6a1edfbb6",
+        "catalog-3ds-a1197f446ae96d3b",
+        "catalog-3ds-c9c2765ce3c91e50",
+        "catalog-3ds-97ec3e1034806a90",
+        "catalog-3ds-b0e8ad13566539c8",
+        "catalog-3ds-ab01681a6ef24dcd",
+        "catalog-3ds-62d49577a329226c",
+        "catalog-3ds-0e16466b15566e66",
+        "catalog-ps3-5fe99153fed84483",
+        "catalog-3ds-f401311bdc593e1b",
+        "catalog-3ds-d00f1ac5d4c84b25",
+        "catalog-ps3-9caaee0cf51662fd",
+        "catalog-psv-110e53055ead4371",
+        "catalog-3ds-524b529a880b50b0",
+        "catalog-ps3-2649b55879c9a523",
+        "catalog-psv-8c7c177fb8602f83",
+        "catalog-3ds-a57bb93afd68275a",
+        "catalog-3ds-ad3ca1dc5df3e849",
+        "catalog-3ds-503bdde5bff9de22",
+        "catalog-3ds-4c97b1db63605571",
+        "catalog-3ds-2ca9160708dd5eb5",
+        "catalog-psv-ab420ebb7530ce09",
+        "catalog-sfc-ab2f7960f5e10e35",
+        "catalog-sfc-27ee0f959870d0b1",
+        "catalog-sfc-03aedf9df00c6025",
+        "catalog-sfc-2b805b46c4089d53",
+        "catalog-sfc-ed5a2492d2f1f959"
+      ],
+      "sources": [
+        "https://www.dragonquest.jp/products/"
+      ]
+    },
+    {
+      "id": "zelda",
+      "name": "ゼルダの伝説",
+      "games": [
+        "gb-398",
+        "gb-798",
+        "gb-1161",
+        "gb-1162",
+        "gba-363",
+        "gba-509",
+        "gba-605",
+        "gba-632",
+        "catalog-n64-4f098d2e64f3e5ce",
+        "catalog-n64-c6cdaeb163835020",
+        "catalog-gc-28115e9eb9856fe2",
+        "catalog-gc-4ca9c31828dbf0b5",
+        "catalog-gc-5e1c7563b7282ee5",
+        "catalog-nds-eb21bf80c8ef8805",
+        "catalog-nds-aa917289a595c797",
+        "catalog-3ds-vc-62bc77b2d75ac221",
+        "catalog-3ds-9d3ca82e5bcf2b0b",
+        "catalog-dsi-cea675c51d4a71f7",
+        "catalog-3ds-vc-8a78b533ac141ed9",
+        "catalog-3ds-vc-c50a611759d4bd3e",
+        "catalog-3ds-vc-23a182aa324d6b30",
+        "catalog-3ds-vc-e2ba8b1d2fa46dad",
+        "catalog-3ds-vc-99cfc33c1c1c427d",
+        "catalog-3ds-4a9f4f4ef3700cb8",
+        "catalog-3ds-e27ebe7511d61cb2",
+        "catalog-3ds-8473571a0d2ea1ce",
+        "catalog-3ds-5e91a0115f686a23",
+        "catalog-new3ds-vc-657bc797733d61a9",
+        "catalog-3ds-69b658c36d84b178",
+        "catalog-sfc-593b06d98ebb32f9"
+      ],
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ]
+    },
+    {
+      "id": "kirby",
+      "name": "星のカービィ",
+      "games": [
+        "gb-288",
+        "gb-438",
+        "gb-556",
+        "gb-596",
+        "gb-640",
+        "gb-1074",
+        "gba-281",
+        "gba-537",
+        "catalog-n64-d35d81d026eb158e",
+        "catalog-gc-f5f9a01fc7fe70ad",
+        "catalog-nds-5e052dd852923791",
+        "catalog-nds-6d3a5f316574788f",
+        "catalog-nds-64d4276ae6eb35a1",
+        "catalog-3ds-vc-8071d5ebdcf0fdf2",
+        "catalog-nds-b6704b273c7c9cf5",
+        "catalog-3ds-vc-0ba996fe754fcd8e",
+        "catalog-3ds-vc-fe73324818de9c7a",
+        "catalog-3ds-vc-b81bcef44a3ddb65",
+        "catalog-3ds-60a5bf73f67017ca",
+        "catalog-3ds-vc-b791c2585b887ff1",
+        "catalog-3ds-vc-65b26cce28dd9afc",
+        "catalog-3ds-7003e67b52d0bfde",
+        "catalog-3ds-ddc1e45c1ab27c8b",
+        "catalog-3ds-b6461874fba8a43b",
+        "catalog-3ds-19980ac8e85defc7",
+        "catalog-new3ds-vc-374a7bb336e62b46",
+        "catalog-new3ds-vc-f3dd8116e1d87820",
+        "catalog-3ds-a8e2bfe85b82291d",
+        "catalog-3ds-cd1ae584cdd63955",
+        "catalog-3ds-7db00b017089c9f5",
+        "catalog-3ds-fa4eff57d69ac185",
+        "catalog-sfc-09a47c5916eb1e73",
+        "catalog-sfc-5aaedfcb51222626",
+        "catalog-sfc-f882730708515e28",
+        "catalog-sfc-82efbf6de4f82eaf"
+      ],
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ]
+    },
+    {
+      "id": "metroid",
+      "name": "メトロイド",
+      "games": [
+        "gb-258",
+        "gba-355",
+        "gba-562",
+        "gba-603",
+        "catalog-gc-9c9e4cbb85d59a20",
+        "catalog-gc-fe940ccfa19bab20",
+        "catalog-nds-0a64561a5212792c",
+        "catalog-nds-5959ce02061a11f8",
+        "catalog-3ds-vc-0a128dc7572848d8",
+        "catalog-3ds-vc-b84439db377bcc3e",
+        "catalog-3ds-vc-a8b56d676f355cce",
+        "catalog-new3ds-vc-600c3163d6c98aa1",
+        "catalog-3ds-9aab692bbac9c2ce",
+        "catalog-3ds-073d53895b4241b6",
+        "catalog-3ds-4bc49b75667b0fb2",
+        "catalog-sfc-20820d38a0c263d8"
+      ],
+      "sources": [
+        "https://www.nintendo.co.jp/3ds/a9aj/history/index.html"
+      ]
+    },
+    {
+      "id": "rockman",
+      "name": "ロックマン",
+      "games": [
+        "ngp-069",
+        "ws-049",
+        "ws-188",
+        "ws-195",
+        "md-487",
+        "gb-203",
+        "gb-245",
+        "gb-349",
+        "gb-432",
+        "gb-493",
+        "gb-1093",
+        "gb-1215",
+        "gba-018",
+        "gba-114",
+        "gba-189",
+        "gba-250",
+        "gba-308",
+        "gba-375",
+        "gba-394",
+        "gba-430",
+        "gba-486",
+        "gba-487",
+        "gba-543",
+        "gba-600",
+        "gba-659",
+        "gba-691",
+        "gba-700",
+        "gba-744",
+        "gba-745",
+        "catalog-ps-862ba194aac32f1a",
+        "catalog-ps-e8752dcab861a0cf",
+        "catalog-ps-a3900b0cbeea9160",
+        "catalog-ps-3a7b27280882e32a",
+        "catalog-ps-5d28a0f52f708860",
+        "catalog-ps-83ef25ed2a9a72aa",
+        "catalog-ps-df4ff6968baefc97",
+        "catalog-ps-20f071384178f4e4",
+        "catalog-ps-177054be5320c999",
+        "catalog-ps-a50fbd10d760e284",
+        "catalog-ps-856e1b48f0f1afd2",
+        "catalog-ps-5a887fc2f7f61d83",
+        "catalog-ps-5ccab844e1bba608",
+        "catalog-n64-fb3e5683ef0fd699",
+        "catalog-ps-1cbba5cc846af79d",
+        "catalog-ps-c1a63359859a9280",
+        "catalog-gc-6ceaecc9ffb0a4a5",
+        "catalog-ps2-c6100cd83c581d02",
+        "catalog-ps2-82270783660b71a0",
+        "catalog-gc-ab1be8cb4386d82b",
+        "catalog-ps2-646098a98e7c6b57",
+        "catalog-ps2-71ead2e3bd5d919d",
+        "catalog-nds-c96c2176b3f2970e",
+        "catalog-psp-752b2f43913e905a",
+        "catalog-psp-13fe16216639c6f7",
+        "catalog-psp-ef5ba073b42e9ad5",
+        "catalog-nds-01dde2760f0ae504",
+        "catalog-nds-5b7d7444115cdde7",
+        "catalog-nds-38e0a635a9c5a5d8",
+        "catalog-nds-2e24aa520b7804a4",
+        "catalog-nds-cfbb3c49313776e8",
+        "catalog-nds-941c765aed559e6c",
+        "catalog-nds-3fe983a2e7528edb",
+        "catalog-nds-6a8ae2f5cc1903fe",
+        "catalog-nds-9dd263345d779d01",
+        "catalog-psp-eda8f29dad296509",
+        "catalog-ps3-0b7dfe28aef18957",
+        "catalog-psp-714b93178ced4fff",
+        "catalog-nds-85091fd5a1615353",
+        "catalog-ps3-4b62241c4e937dec",
+        "catalog-nds-f3a4e68017ce40c1",
+        "catalog-3ds-vc-e7f295bf8306a292",
+        "catalog-3ds-vc-08e80751f202d751",
+        "catalog-3ds-vc-e8b5ff6cff300fba",
+        "catalog-3ds-vc-75042db4cd0fb163",
+        "catalog-3ds-vc-54d9940992605334",
+        "catalog-3ds-vc-0f7dbfba1c737335",
+        "catalog-3ds-vc-21948a8df6a1aca8",
+        "catalog-3ds-vc-8ef31d0a9b023308",
+        "catalog-3ds-vc-ec2a8a2ca21e67f9",
+        "catalog-3ds-vc-7ec0b5daa858a6f2",
+        "catalog-3ds-vc-9a36a5b0db25af42",
+        "catalog-3ds-vc-ecc2d4b14b5290b9",
+        "catalog-3ds-vc-b8537b53611a892f",
+        "catalog-3ds-2b5160901e70c378",
+        "catalog-new3ds-vc-45fd021f0efb1fff",
+        "catalog-new3ds-vc-aebc19505d494d61",
+        "catalog-new3ds-vc-be03485936725464",
+        "catalog-new3ds-vc-323774e4c37c4946",
+        "catalog-sfc-4361c6d697ebb5f9",
+        "catalog-sfc-d2f2d99b2e9c189e",
+        "catalog-sfc-e1650ca43c35260d",
+        "catalog-sfc-bfbd3b18b602d06d",
+        "catalog-sfc-3053f6b06c81e067",
+        "catalog-ss-fc2b629f4ee7c5fe",
+        "catalog-ss-4ff7282331530d6e",
+        "catalog-ss-b30916aeba9ca422",
+        "catalog-sfc-8986362943f27774",
+        "catalog-ss-a41ac76bf50ed61b"
+      ],
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ]
+    },
+    {
+      "id": "sonic",
+      "name": "ソニック",
+      "games": [
+        "ngp-064",
+        "md-127",
+        "md-258",
+        "md-357",
+        "md-383",
+        "md-453",
+        "md-488",
+        "md-527",
+        "gba-118",
+        "gba-328",
+        "gba-409",
+        "gba-468",
+        "gba-564",
+        "gba-763",
+        "gba-764",
+        "gba-765",
+        "catalog-gg-6447e921ff4a6408",
+        "catalog-gg-9ecef1dc9ec5bc18",
+        "catalog-gg-099a09186dc55278",
+        "catalog-gg-b2505bb957273f74",
+        "catalog-gg-ffc8ac70ea276593",
+        "catalog-gg-cb86b0feb41ccc9a",
+        "catalog-gg-1ee063ef3af111e1",
+        "catalog-gg-6b1971da40ed358a",
+        "catalog-gg-c4db9ec0958dd492",
+        "catalog-gg-bd18d7230b754e5e",
+        "catalog-gc-91da38d91a4cc3d5",
+        "catalog-gc-0b82629001aa79e5",
+        "catalog-gc-6a917dcb98437e00",
+        "catalog-ps2-f7c76c5e5a32c64f",
+        "catalog-gc-1ed71fef235cb3ff",
+        "catalog-ps2-7c5fba7d98ae45f9",
+        "catalog-ps2-7ae6f37573259c05",
+        "catalog-gc-918c28b2242829d6",
+        "catalog-nds-516dba35a449f531",
+        "catalog-ps2-295dfb4ae191564e",
+        "catalog-gc-95e1d91cbfddec79",
+        "catalog-ps2-d70d188c67342690",
+        "catalog-gc-8dec620db33e38ce",
+        "catalog-ps3-d5a5823c5e1d4a35",
+        "catalog-nds-a8d5ea4ab2ea6598",
+        "catalog-nds-282178ae1101d125",
+        "catalog-ps3-95017a16c413f285",
+        "catalog-nds-2edaee20a6bf6ad8",
+        "catalog-nds-8fbbc64113b730d0",
+        "catalog-ps3-149ea0299dff9432",
+        "catalog-nds-b6bdf768df7fff9e",
+        "catalog-ps3-726befeb6a51b3fb",
+        "catalog-ps3-77a047c8e9509c6f",
+        "catalog-3ds-5d1c5c2ab0776dd0",
+        "catalog-3ds-bcd72dfd08835f5b",
+        "catalog-3ds-vc-e25545dfe0ee6851",
+        "catalog-3ds-vc-0d9550592c0abcb7",
+        "catalog-ps3-fee77b195ca14118",
+        "catalog-3ds-vc-4ba49a68f17b387e",
+        "catalog-ps3-969801da2316df3e",
+        "catalog-3ds-vc-0b6e6ac16a45ee78",
+        "catalog-3ds-vc-c0ef0f53734f7d4f",
+        "catalog-ps3-bd2e31aded591839",
+        "catalog-3ds-vc-26aa9f6cc6f9e3b6",
+        "catalog-3ds-e991fd4330af4069",
+        "catalog-3ds-8cd63e259e078ca8",
+        "catalog-3ds-vc-d8b2be6c0c605d64",
+        "catalog-ps3-b3edc501e3acd08a",
+        "catalog-3ds-40e85f6c69fa591d",
+        "catalog-3ds-0b0d8a0452e9025d",
+        "catalog-3ds-97a4d12374015ecc",
+        "catalog-3ds-511cea63312cadd1",
+        "catalog-ss-b18824ea71d51472",
+        "catalog-ss-662f587ccb07d183",
+        "catalog-dc-55b94dc041a6bb58",
+        "catalog-ss-9835cc194194e906",
+        "catalog-dc-a9e5e0981394debb",
+        "catalog-dc-09e999a9ebddf243",
+        "catalog-dc-887ecb60f09b0ab8"
+      ],
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ]
+    },
+    {
+      "id": "bio",
+      "name": "バイオハザード",
+      "games": [
+        "gb-1272",
+        "catalog-ps-448f3a1e46ac8af8",
+        "catalog-ps-c9f4279761389af0",
+        "catalog-ps-1a60442d1a9cfd02",
+        "catalog-ps-0b78512b558ae6ce",
+        "catalog-ps-c189a5786da64092",
+        "catalog-ps-e031745d39bcbac3",
+        "catalog-ps-9aac41454d9c7a94",
+        "catalog-n64-1db422e296848a82",
+        "catalog-ps2-192ebe57f18342a4",
+        "catalog-ps2-0b13d045b0445693",
+        "catalog-gc-7084266a339a6f8b",
+        "catalog-gc-c49efcbe5916b1a0",
+        "catalog-gc-40f6612b3386a099",
+        "catalog-gc-946d65d708b96d5c",
+        "catalog-ps2-91790368dae288a7",
+        "catalog-gc-0efa2e924a62dd07",
+        "catalog-ps2-8bfb2e30e02e47be",
+        "catalog-ps2-37cd530c07175bf5",
+        "catalog-gc-60a3402c6cebf2bf",
+        "catalog-ps2-24c7da106ec29d21",
+        "catalog-nds-6714563a0f1f347f",
+        "catalog-ps3-b83f7581ecb59940",
+        "catalog-ps2-dda054fbd86a85bc",
+        "catalog-ps3-5c2925fe16437808",
+        "catalog-ps3-456a10ee47d0339f",
+        "catalog-ps3-894c3a812f763170",
+        "catalog-3ds-391ed74222b2e384",
+        "catalog-ps3-a1b2160b08e05a7c",
+        "catalog-ps3-e385aff8c2b8b1ab",
+        "catalog-3ds-c4ae9175ced03b52",
+        "catalog-ps3-5578e4347c3c1dcf",
+        "catalog-ps3-819bcd20aad4a888",
+        "catalog-ps3-4d020c449c09bb46",
+        "catalog-ps3-d499413dae55174e",
+        "catalog-ps3-c58a109d979f0f08",
+        "catalog-ps3-0c7ae85746136999",
+        "catalog-ps3-2d9496b73fbe391b",
+        "catalog-ps3-77e2f22c0347cc9c",
+        "catalog-ps3-2e36ec2423d925f5",
+        "catalog-3ds-4904182a39853946",
+        "catalog-ps3-38298754912a7ecd",
+        "catalog-ps3-0856e6ee311abbff",
+        "catalog-ps3-cd1e74f12a016cc7",
+        "catalog-ps3-8e5b643ba7569b66",
+        "catalog-ps3-df4ef00130fdbf48",
+        "catalog-ps3-d095a4121d561798",
+        "catalog-ps3-aaab518bee4c4688",
+        "catalog-ps3-c8e35d88ab668045",
+        "catalog-ps3-c25a63877b8d5728",
+        "catalog-psv-3edd9bd63043ead2",
+        "catalog-ps3-a2364426abd40764",
+        "catalog-ss-a92522c287419f10",
+        "catalog-dc-a12d34bd899359f6",
+        "catalog-dc-ed04ca5c74fd87d7",
+        "catalog-dc-dd0689fdd45a59de",
+        "catalog-dc-cc49aa6d25739b60"
+      ],
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ]
+    },
+    {
+      "id": "tales",
+      "name": "テイルズ オブ",
+      "games": [
+        "gb-1101",
+        "gba-278",
+        "gba-362",
+        "gba-422",
+        "gba-680",
+        "catalog-ps-fafe2fa29b4a37af",
+        "catalog-ps-f6938f260e9ff395",
+        "catalog-ps-8d8e6fa230288411",
+        "catalog-ps-107db7b06a19bdda",
+        "catalog-ps-281175fd0c2a494d",
+        "catalog-ps2-08afa4b8e987734c",
+        "catalog-gc-5990e75aee6c7530",
+        "catalog-ps2-0c512a5f89c2629f",
+        "catalog-ps2-06b300a97e7b3528",
+        "catalog-psp-b7d446d9cb2b7c5f",
+        "catalog-ps2-543bf33be990c30b",
+        "catalog-ps2-2523a164ee041feb",
+        "catalog-psp-333d69839ed69e73",
+        "catalog-nds-589a5812844e54ea",
+        "catalog-ps2-e052f5ecea3c19cb",
+        "catalog-psp-4dc2d40377d4efc5",
+        "catalog-psp-8b45f6cd5a4e435e",
+        "catalog-ps2-3717ae7e4aec4d6f",
+        "catalog-ps2-e2268249ece72d78",
+        "catalog-nds-57a9c3c6357f8531",
+        "catalog-ps2-28f89e0777e4ace4",
+        "catalog-psp-7b5da8076837857a",
+        "catalog-nds-22862d6bba4a958d",
+        "catalog-nds-f9ed03ae3566c2a9",
+        "catalog-psp-ad15ef9b71ed9ac0",
+        "catalog-psp-a0dc22ac29bdd541",
+        "catalog-ps3-c8f02ae7070d4d69",
+        "catalog-psp-ede7eca06badeeec",
+        "catalog-ps3-fec99112835f9ff2",
+        "catalog-psp-72d29d4c0305d2b8",
+        "catalog-3ds-ec97396497507d40",
+        "catalog-ps3-9e167c23b8e5c9d5",
+        "catalog-psv-875da2471e5c645c",
+        "catalog-psp-c893f943961de2fc",
+        "catalog-ps3-dd0e8292b684fbd5",
+        "catalog-psv-22ab2af203a715c0",
+        "catalog-ps3-6e62bc5cd7d58e2d",
+        "catalog-3ds-0fb5a7a9a7a2fc52",
+        "catalog-ps3-3da5d42cd20fdfc0",
+        "catalog-ps3-805b42452b7a1b90",
+        "catalog-sfc-a96c63a55093e002"
+      ],
+      "sources": [
+        "https://tales-ch.jp/titles/"
+      ]
+    },
+    {
+      "id": "ys",
+      "name": "イース",
+      "games": [
+        "pce-096",
+        "pce-241",
+        "pce-534",
+        "md-150",
+        "catalog-ps2-6ecbe440de2f8d03",
+        "catalog-ps2-3d48fab52401d7ec",
+        "catalog-ps2-edb43124d7acdecf",
+        "catalog-ps2-67cac1c18ac7a1ca",
+        "catalog-psp-aa11399d79a6cf21",
+        "catalog-nds-6c199894c1dd4489",
+        "catalog-ps2-501c190d3aa83a23",
+        "catalog-nds-6ff0f1a299558b4c",
+        "catalog-nds-e38bebf0e1bf89bb",
+        "catalog-psp-595c0384d8b187d9",
+        "catalog-psp-966f0b08a5952c2d",
+        "catalog-psp-bb8d35c087d295ff",
+        "catalog-psp-70d0e4198f6b27b4",
+        "catalog-psp-7e325a8be6e031b9",
+        "catalog-ps3-2d909647d1b874b1",
+        "catalog-psp-88625f7877d120f9",
+        "catalog-psp-86bd821ab64293dc",
+        "catalog-psp-d03002e175827c02",
+        "catalog-psp-622f29a9317bb752",
+        "catalog-psv-298ca234c50fc262",
+        "catalog-psv-9117fd8a72749e58",
+        "catalog-psv-4f1cb3faaf1fab88",
+        "catalog-sfc-82972ebfd37b5a94",
+        "catalog-sfc-7df7f40e60a710e8",
+        "catalog-sfc-d5ceda3c784e0051",
+        "catalog-sfc-307ace869e8922bc"
+      ],
+      "sources": [
+        "https://www.falcom.co.jp/ys"
+      ]
+    },
+    {
+      "id": "castlevania",
+      "name": "悪魔城ドラキュラ",
+      "games": [
+        "pce-518",
+        "md-422",
+        "gb-013",
+        "gb-198",
+        "gb-369",
+        "gb-690",
+        "gba-026",
+        "gba-200",
+        "gba-395",
+        "gba-609",
+        "catalog-ps-f8bc9ce2bc2101d1",
+        "catalog-n64-b7d8f4704e95df81",
+        "catalog-n64-c6cc2088f8d5b952",
+        "catalog-ps-8f21a336e1a5509a",
+        "catalog-ps2-2a3e7aa80ea5b0c3",
+        "catalog-nds-c1ea10708aed2246",
+        "catalog-ps2-a01c7f8619ea03e3",
+        "catalog-ps2-385acc007d42a543",
+        "catalog-nds-a9fe1225e83b1c53",
+        "catalog-psp-dcc70b3077cc1a2e",
+        "catalog-nds-7b4046ae0ead6578",
+        "catalog-ps3-464f1ef61ea28ebc",
+        "catalog-3ds-vc-ef1b1667cfac59e3",
+        "catalog-ps3-3242aa17fee4c711",
+        "catalog-3ds-vc-b428ca60c63e44d7",
+        "catalog-3ds-546b4d677e8927c8",
+        "catalog-3ds-vc-1723b1f4eb12f135",
+        "catalog-ps3-a7ad138c6c712cf8",
+        "catalog-ps3-b09c2a95d6989b62",
+        "catalog-new3ds-vc-6fd1b82500c9ad5e",
+        "catalog-new3ds-vc-3569bad0165b2767",
+        "catalog-sfc-412e2ec3812ca41e",
+        "catalog-sfc-40f19f9ec03f1b9b",
+        "catalog-ss-32e7b29f2ce5a03b"
+      ],
+      "sources": [
+        "https://www.konami.com/games/castlevania/jp/ja/history"
+      ]
+    },
+    {
+      "id": "persona",
+      "name": "ペルソナ",
+      "games": [
+        "catalog-ps-c809a29176838c57",
+        "catalog-ps-6e3fd87b72db1a99",
+        "catalog-ps-065590ab876a24aa",
+        "catalog-ps2-6ff65a1c9447da55",
+        "catalog-ps2-64a7873c526012c4",
+        "catalog-ps2-cb03ac8086187601",
+        "catalog-ps2-b0412e1c17932d0e",
+        "catalog-psp-7826ec0758f0ce1c",
+        "catalog-psp-ebb197ce499a6941",
+        "catalog-psp-49384ec1962fb35e",
+        "catalog-psp-308de8cf670f1504",
+        "catalog-psv-bcad0c6c817ec5b1",
+        "catalog-ps3-860dc75110705a0f",
+        "catalog-3ds-85af971c83f1cac4",
+        "catalog-ps3-e122f8f3bfda20a9",
+        "catalog-psv-ca0e28e51e31ab24",
+        "catalog-ps3-1fd7141b5dd704b1",
+        "catalog-psv-75823bbbb21c57ba",
+        "catalog-psv-dc18f639cc495d00",
+        "catalog-psv-7c7d8c39be15ecbe",
+        "catalog-3ds-f0915a60a4ecd773"
+      ],
+      "sources": [
+        "https://p-ch.jp/p30th/"
+      ]
+    },
+    {
+      "id": "saga",
+      "name": "サガ",
+      "games": [
+        "ws-158",
+        "ws-167",
+        "gb-018",
+        "gb-128",
+        "gb-234",
+        "catalog-ps-5560fb18ac6e79a6",
+        "catalog-ps-79c129645b168305",
+        "catalog-ps2-45dc6551dfbaec48",
+        "catalog-ps2-78b8d2ad41021ab8",
+        "catalog-nds-b975e8eea30ef365",
+        "catalog-nds-1ef0cd22dc8e2553",
+        "catalog-psv-3f7034e4a6a90bd3",
+        "catalog-new3ds-vc-3166107b5497a529",
+        "catalog-psv-666424936e8d68c1",
+        "catalog-new3ds-vc-1efc056d176b926f",
+        "catalog-psv-694c5155183bd7f0",
+        "catalog-sfc-53f779cd100fa4d6",
+        "catalog-sfc-d3dbc41fcfc56369",
+        "catalog-sfc-040b8113a1210675"
+      ],
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ]
+    },
+    {
+      "id": "mana",
+      "name": "聖剣伝説",
+      "games": [
+        "gb-195",
+        "gba-432",
+        "catalog-ps-7b8e402abb3b7f2a",
+        "catalog-nds-261b20683371efbf",
+        "catalog-ps2-e4bb6f8c88d75755",
+        "catalog-nds-ad7f15b66a891229",
+        "catalog-psv-ce8cf246705915a2",
+        "catalog-psv-a0385668ee0cdcf8",
+        "catalog-psv-836d6528a5149910",
+        "catalog-sfc-2879978a78fccfb5",
+        "catalog-sfc-61eae4a58c913711"
+      ],
+      "sources": [
+        "https://www.jp.square-enix.com/column/detail/134/"
+      ]
+    },
+    {
+      "id": "ace",
+      "name": "逆転裁判",
+      "games": [
+        "gba-079",
+        "gba-273",
+        "gba-499",
+        "catalog-nds-be69cb9db03248f5",
+        "catalog-nds-73ed73c6cf7594bd",
+        "catalog-nds-ced5a9905c434267",
+        "catalog-nds-dbd45e85aec3ce4a",
+        "catalog-nds-9ee0910585262397",
+        "catalog-nds-ebafdaa6f9072bd0",
+        "catalog-3ds-2fd63bf43af70d6f",
+        "catalog-3ds-e3a424d1ace8996b",
+        "catalog-3ds-9ea933b5b2d07683",
+        "catalog-3ds-272df23d217007e4",
+        "catalog-3ds-ecc8b5f6931d62b1",
+        "catalog-3ds-86254092084f20f3",
+        "catalog-3ds-246cc1b8076cd7fe",
+        "catalog-3ds-1d5b8583ade217df",
+        "catalog-3ds-4afeb13e21b2cea2"
+      ],
+      "sources": [
+        "https://store.captown.capcom.com/collections/ace-attorney"
+      ]
+    },
+    {
+      "id": "puyo",
+      "name": "ぷよぷよ",
+      "games": [
+        "ngp-029",
+        "ws-005",
+        "pce-561",
+        "pce-651",
+        "md-267",
+        "md-494",
+        "gb-502",
+        "gb-630",
+        "gb-789",
+        "gb-898",
+        "gb-1079",
+        "gba-080",
+        "gba-587",
+        "catalog-gg-e1109388b0644d11",
+        "catalog-gg-a444e973d0e1788d",
+        "catalog-gg-4fa49d2bc3e4f5ef",
+        "catalog-gg-2d401512894931c1",
+        "catalog-gg-719a0e559422b563",
+        "catalog-ps-b8869faa60c8a226",
+        "catalog-n64-c69b21f4bd6aafd8",
+        "catalog-ps-187a1a3dc8ba1338",
+        "catalog-n64-1cd6b78ba928b2b7",
+        "catalog-ps-a3165f45f7f36353",
+        "catalog-ps-44356e937dff95c7",
+        "catalog-ps2-356c54e1bb69a355",
+        "catalog-gc-12ea1db9cdecf17c",
+        "catalog-ps2-bdd688dfbb2f9984",
+        "catalog-nds-790556394a7ef7ef",
+        "catalog-psp-c80eb4a7048d01a6",
+        "catalog-ps2-572b5fea90c4f401",
+        "catalog-psp-2650652bcca1c5a2",
+        "catalog-nds-f5f4706c01f7e5a1",
+        "catalog-nds-302170b3e4439b13",
+        "catalog-psp-3cde1165b8f07596",
+        "catalog-ps2-7b975879965ea4db",
+        "catalog-nds-77f0528a0bc4112d",
+        "catalog-psp-44552aeccf535ee0",
+        "catalog-3ds-f6d84ceca32f420d",
+        "catalog-3ds-73d7e12f44a13ace",
+        "catalog-3ds-vc-b1a3ffba542f74f9",
+        "catalog-3ds-vc-3334986d50eea245",
+        "catalog-3ds-vc-98f2b7a2cfe324e5",
+        "catalog-3ds-vc-ed0a681ecae617fc",
+        "catalog-3ds-vc-8213c484f807b097",
+        "catalog-3ds-48daed7bba662b4a",
+        "catalog-psv-ba96a724cd62efe4",
+        "catalog-ps3-dba10bb46398ccd8",
+        "catalog-3ds-9c660ffe06ac5f3a",
+        "catalog-3ds-d62b34874da18e40",
+        "catalog-sfc-3434e7243cd8fd43",
+        "catalog-sfc-e9cb6b75d47d3296",
+        "catalog-ss-4b7ab5fa2dea87ae",
+        "catalog-sfc-c73f09a7d14db644",
+        "catalog-sfc-0566bb139c3c046f",
+        "catalog-sfc-7cb0b8a34599b211",
+        "catalog-ss-08f1e64694bc4e08",
+        "catalog-ss-a6c3e4d67b17b9ba",
+        "catalog-ss-e2c5e6ad115a9a14",
+        "catalog-dc-d6d1737edb9397c6",
+        "catalog-dc-c8d8885f500eb017",
+        "catalog-dc-a57c914a112f5fbe"
+      ],
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ]
+    },
+    {
+      "id": "pokemon",
+      "name": "ポケットモンスター",
+      "games": [
+        "gb-601",
+        "gb-602",
+        "gb-617",
+        "gb-771",
+        "gb-803",
+        "gb-844",
+        "gb-928",
+        "gb-929",
+        "gb-1077",
+        "gb-1127",
+        "gb-1177",
+        "gba-291",
+        "gba-292",
+        "gba-423",
+        "gba-500",
+        "gba-501",
+        "gba-615",
+        "gba-743",
+        "catalog-n64-203bfc19ff3f8f64",
+        "catalog-n64-3d2307a59961a9ef",
+        "catalog-n64-41e6484625a5b9cc",
+        "catalog-n64-f9d064e84f5ccddf",
+        "catalog-n64-e27c75ba9bdd0cd3",
+        "catalog-gc-29ce912841756ee6",
+        "catalog-gc-5b8779a575daec83",
+        "catalog-gc-f09a396a2d4a232f",
+        "catalog-nds-d535c85ba466cfc9",
+        "catalog-gc-31afd15210131fbe",
+        "catalog-gc-768876f46748af4e",
+        "catalog-nds-2ae4115bc7c3a117",
+        "catalog-nds-e59c608341fdc4da",
+        "catalog-nds-ca002e5fe64f5d15",
+        "catalog-nds-8b274aac8e0776d5",
+        "catalog-nds-51eb6d0c6ea2fe24",
+        "catalog-nds-e41b12638e1ed962",
+        "catalog-nds-105c16f9b0a8e4f3",
+        "catalog-nds-73a1cd6ed3ac8bbf",
+        "catalog-nds-f72e2f3031b4d50f",
+        "catalog-nds-434dd5fd6bec4c24",
+        "catalog-nds-175df1134edfa7ff",
+        "catalog-nds-29b56083c52f2bd8",
+        "catalog-nds-dd3b608223c3d755",
+        "catalog-nds-4033d1fed1fe43ce",
+        "catalog-nds-8136ebacaa42bfc3",
+        "catalog-nds-b5793ff77226e94d",
+        "catalog-3ds-9911a13f52a43d71",
+        "catalog-3ds-d0cb133127e3bb1c",
+        "catalog-nds-21054cbf558e7191",
+        "catalog-nds-393a119bd56f6857",
+        "catalog-nds-cf9340f0ebefe95a",
+        "catalog-3ds-5e927fd8673545eb",
+        "catalog-3ds-1b9e03ef2b01a4bc",
+        "catalog-3ds-f20f4637bdcda646",
+        "catalog-3ds-bc06e1b10ea91838",
+        "catalog-3ds-88ee6bf65108a29b",
+        "catalog-3ds-88681647b283c4d9",
+        "catalog-3ds-c3f2ef868ee8a786",
+        "catalog-3ds-87e78cca8ad938e8",
+        "catalog-3ds-fe43b87412c38d43",
+        "catalog-3ds-a6efa924f0e8df68",
+        "catalog-3ds-d8bce2891b605239",
+        "catalog-3ds-15ce442bdd06e8a6",
+        "catalog-3ds-vc-572ef27bc7bf39f2",
+        "catalog-3ds-4c41ec591829bca9",
+        "catalog-3ds-91c9e9b0ec620b34",
+        "catalog-3ds-45fec05bfc16aff5",
+        "catalog-3ds-28a133716a5037fd",
+        "catalog-3ds-vc-855222b729a6ad9f",
+        "catalog-3ds-vc-0c6fdfd8973f30da",
+        "catalog-3ds-vc-054506d7ec636c80",
+        "catalog-3ds-vc-4c574a07629d09c6",
+        "catalog-3ds-48f2ced3146e1ba4",
+        "catalog-3ds-e0d53a15261dfc94",
+        "catalog-3ds-vc-569a0096539dd3b6",
+        "catalog-3ds-vc-f6d1db9ffa6f1445",
+        "catalog-3ds-033a53da6480eda8",
+        "catalog-3ds-cdc9edeb81f34327",
+        "catalog-3ds-vc-457d0d1c0fc14513",
+        "catalog-3ds-ac3bf4f01ca26368"
+      ],
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
       ]
     }
   ],
@@ -139,6 +1088,2185 @@
       "sources": [
         "https://sakura-taisen.com/archives/game/psp/faq_frame.html"
       ]
+    },
+    {
+      "a": "gb-288",
+      "b": "catalog-3ds-vc-8071d5ebdcf0fdf2",
+      "kind": "edition",
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-556",
+      "b": "catalog-3ds-vc-b81bcef44a3ddb65",
+      "kind": "edition",
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-596",
+      "b": "catalog-3ds-vc-0ba996fe754fcd8e",
+      "kind": "edition",
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-438",
+      "b": "catalog-3ds-vc-65b26cce28dd9afc",
+      "kind": "edition",
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-640",
+      "b": "catalog-3ds-vc-b791c2585b887ff1",
+      "kind": "edition",
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-82efbf6de4f82eaf",
+      "b": "catalog-new3ds-vc-f3dd8116e1d87820",
+      "kind": "edition",
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-09a47c5916eb1e73",
+      "b": "catalog-new3ds-vc-374a7bb336e62b46",
+      "kind": "edition",
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-537",
+      "b": "catalog-3ds-vc-fe73324818de9c7a",
+      "kind": "edition",
+      "sources": [
+        "https://www.kirby.jp/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-355",
+      "b": "catalog-3ds-vc-b84439db377bcc3e",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/switch/ayl8a/report/vol3/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-20820d38a0c263d8",
+      "b": "catalog-new3ds-vc-600c3163d6c98aa1",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/switch/ayl8a/report/vol3/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-258",
+      "b": "catalog-3ds-vc-0a128dc7572848d8",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/switch/ayl8a/report/vol3/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-258",
+      "b": "catalog-3ds-4bc49b75667b0fb2",
+      "kind": "remake",
+      "sources": [
+        "https://www.nintendo.com/jp/switch/ayl8a/report/vol3/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-3ds-vc-0a128dc7572848d8",
+      "b": "catalog-3ds-4bc49b75667b0fb2",
+      "kind": "remake",
+      "sources": [
+        "https://www.nintendo.com/jp/switch/ayl8a/report/vol3/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-603",
+      "b": "catalog-3ds-vc-a8b56d676f355cce",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/switch/ayl8a/report/vol3/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-603",
+      "b": "gba-562",
+      "kind": "remake",
+      "sources": [
+        "https://www.nintendo.com/jp/switch/ayl8a/report/vol3/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-3ds-vc-a8b56d676f355cce",
+      "b": "gba-562",
+      "kind": "remake",
+      "sources": [
+        "https://www.nintendo.com/jp/switch/ayl8a/report/vol3/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-5aaedfcb51222626",
+      "b": "catalog-nds-64d4276ae6eb35a1",
+      "kind": "remake",
+      "sources": [
+        "https://www.nintendo.co.jp/ds/ykwj/subgame/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-412e2ec3812ca41e",
+      "b": "catalog-new3ds-vc-6fd1b82500c9ad5e",
+      "kind": "edition",
+      "sources": [
+        "https://www.konami.com/games/castlevania/jp/ja/history"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-40f19f9ec03f1b9b",
+      "b": "catalog-new3ds-vc-3569bad0165b2767",
+      "kind": "edition",
+      "sources": [
+        "https://www.konami.com/games/castlevania/jp/ja/history"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-013",
+      "b": "catalog-3ds-vc-ef1b1667cfac59e3",
+      "kind": "edition",
+      "sources": [
+        "https://www.konami.com/games/castlevania/jp/ja/history"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-609",
+      "b": "catalog-3ds-vc-b428ca60c63e44d7",
+      "kind": "edition",
+      "sources": [
+        "https://www.konami.com/games/castlevania/jp/ja/history"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-f8bc9ce2bc2101d1",
+      "b": "catalog-ss-32e7b29f2ce5a03b",
+      "kind": "edition",
+      "sources": [
+        "https://www.konami.com/games/castlevania/jp/ja/history"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-601",
+      "b": "catalog-3ds-vc-855222b729a6ad9f",
+      "kind": "edition",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-602",
+      "b": "catalog-3ds-vc-0c6fdfd8973f30da",
+      "kind": "edition",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-617",
+      "b": "catalog-3ds-vc-054506d7ec636c80",
+      "kind": "edition",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-771",
+      "b": "catalog-3ds-vc-4c574a07629d09c6",
+      "kind": "edition",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-928",
+      "b": "catalog-3ds-vc-569a0096539dd3b6",
+      "kind": "edition",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-929",
+      "b": "catalog-3ds-vc-f6d1db9ffa6f1445",
+      "kind": "edition",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-1127",
+      "b": "catalog-3ds-vc-457d0d1c0fc14513",
+      "kind": "edition",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-803",
+      "b": "catalog-3ds-vc-572ef27bc7bf39f2",
+      "kind": "edition",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-601",
+      "b": "gba-500",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-3ds-vc-855222b729a6ad9f",
+      "b": "gba-500",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-602",
+      "b": "gba-501",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-3ds-vc-0c6fdfd8973f30da",
+      "b": "gba-501",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-928",
+      "b": "catalog-nds-175df1134edfa7ff",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-3ds-vc-569a0096539dd3b6",
+      "b": "catalog-nds-175df1134edfa7ff",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-929",
+      "b": "catalog-nds-29b56083c52f2bd8",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-3ds-vc-f6d1db9ffa6f1445",
+      "b": "catalog-nds-29b56083c52f2bd8",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-292",
+      "b": "catalog-3ds-d8bce2891b605239",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-291",
+      "b": "catalog-3ds-15ce442bdd06e8a6",
+      "kind": "remake",
+      "sources": [
+        "https://www.pokemon.co.jp/game/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-c69e296638d83060",
+      "b": "catalog-nds-7d0db459f5721a6e",
+      "kind": "remake",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-ab2f7960f5e10e35",
+      "b": "catalog-ps2-81a7a0a890d0b05b",
+      "kind": "remake",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-ab2f7960f5e10e35",
+      "b": "catalog-nds-b0d4cc6c210bc752",
+      "kind": "remake",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-81a7a0a890d0b05b",
+      "b": "catalog-nds-b0d4cc6c210bc752",
+      "kind": "edition",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-2b805b46c4089d53",
+      "b": "catalog-nds-e5add66964bebcdb",
+      "kind": "remake",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-08d618d698c1fc16",
+      "b": "catalog-3ds-b0e8ad13566539c8",
+      "kind": "remake",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-afd4994821f6ab72",
+      "b": "catalog-3ds-d00f1ac5d4c84b25",
+      "kind": "edition",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps3-9caaee0cf51662fd",
+      "b": "catalog-psv-110e53055ead4371",
+      "kind": "edition",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps3-2649b55879c9a523",
+      "b": "catalog-psv-8c7c177fb8602f83",
+      "kind": "edition",
+      "sources": [
+        "https://www.dragonquest.jp/guideline/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-f7cbea6a00d601a5",
+      "b": "catalog-new3ds-vc-2ed68a5b7a7b7b04",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-9c10b1739bcfd6b3",
+      "b": "catalog-ps-f7cbea6a00d601a5",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-f7cbea6a00d601a5",
+      "b": "gba-752",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-f7cbea6a00d601a5",
+      "b": "ws-168",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-9c10b1739bcfd6b3",
+      "b": "catalog-new3ds-vc-2ed68a5b7a7b7b04",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-752",
+      "b": "catalog-new3ds-vc-2ed68a5b7a7b7b04",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "ws-168",
+      "b": "catalog-new3ds-vc-2ed68a5b7a7b7b04",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-9c10b1739bcfd6b3",
+      "b": "gba-752",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-9c10b1739bcfd6b3",
+      "b": "ws-168",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "ws-168",
+      "b": "gba-752",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles",
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-d349854333da7366",
+      "b": "catalog-new3ds-vc-e5c92206bf24e5ae",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-401e1c0972a2e61f",
+      "b": "catalog-ps-d349854333da7366",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-d349854333da7366",
+      "b": "gba-790",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-401e1c0972a2e61f",
+      "b": "catalog-new3ds-vc-e5c92206bf24e5ae",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-790",
+      "b": "catalog-new3ds-vc-e5c92206bf24e5ae",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-401e1c0972a2e61f",
+      "b": "gba-790",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-46e31e16fbc8d102",
+      "b": "catalog-new3ds-vc-e51e938be38afa3d",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-8177a9ea2e8eedee",
+      "b": "catalog-ps-46e31e16fbc8d102",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-46e31e16fbc8d102",
+      "b": "gba-791",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-8177a9ea2e8eedee",
+      "b": "catalog-new3ds-vc-e51e938be38afa3d",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-791",
+      "b": "catalog-new3ds-vc-e51e938be38afa3d",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-8177a9ea2e8eedee",
+      "b": "gba-791",
+      "kind": "edition",
+      "sources": [
+        "https://jp.finalfantasy.com/titles"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-nds-19152374163bbce1",
+      "b": "catalog-psp-428ed7126fa2757f",
+      "kind": "edition",
+      "sources": [
+        "https://www.jp.square-enix.com/ff3/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "ws-168",
+      "b": "catalog-nds-03b1adfd5ce6bf5d",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-f7cbea6a00d601a5",
+      "b": "catalog-nds-03b1adfd5ce6bf5d",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-new3ds-vc-2ed68a5b7a7b7b04",
+      "b": "catalog-nds-03b1adfd5ce6bf5d",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-9c10b1739bcfd6b3",
+      "b": "catalog-nds-03b1adfd5ce6bf5d",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-752",
+      "b": "catalog-nds-03b1adfd5ce6bf5d",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/game/detail/ff4/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-53f779cd100fa4d6",
+      "b": "catalog-new3ds-vc-3166107b5497a529",
+      "kind": "edition",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "ws-158",
+      "b": "catalog-new3ds-vc-3166107b5497a529",
+      "kind": "edition",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-53f779cd100fa4d6",
+      "b": "ws-158",
+      "kind": "edition",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-d3dbc41fcfc56369",
+      "b": "catalog-new3ds-vc-1efc056d176b926f",
+      "kind": "edition",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-psv-3f7034e4a6a90bd3",
+      "b": "catalog-new3ds-vc-1efc056d176b926f",
+      "kind": "edition",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-d3dbc41fcfc56369",
+      "b": "catalog-psv-3f7034e4a6a90bd3",
+      "kind": "edition",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-040b8113a1210675",
+      "b": "catalog-psv-694c5155183bd7f0",
+      "kind": "edition",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-018",
+      "b": "ws-167",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-128",
+      "b": "catalog-nds-b975e8eea30ef365",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-234",
+      "b": "catalog-nds-1ef0cd22dc8e2553",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-new3ds-vc-3166107b5497a529",
+      "b": "catalog-ps2-78b8d2ad41021ab8",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-53f779cd100fa4d6",
+      "b": "catalog-ps2-78b8d2ad41021ab8",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "ws-158",
+      "b": "catalog-ps2-78b8d2ad41021ab8",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/saga_portal/chronicle/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-195",
+      "b": "gba-432",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/game/detail/s_seiken/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-195",
+      "b": "catalog-psv-a0385668ee0cdcf8",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/seiken/sp/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-2879978a78fccfb5",
+      "b": "catalog-psv-836d6528a5149910",
+      "kind": "remake",
+      "sources": [
+        "https://www.jp.square-enix.com/seiken2_som/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-n64-4f098d2e64f3e5ce",
+      "b": "catalog-3ds-9d3ca82e5bcf2b0b",
+      "kind": "remake",
+      "sources": [
+        "https://www.nintendo.com/jp/interview/bdgea/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-n64-c6cdaeb163835020",
+      "b": "catalog-3ds-e27ebe7511d61cb2",
+      "kind": "remake",
+      "sources": [
+        "https://www.nintendo.com/jp/interview/bdgea/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-398",
+      "b": "gb-798",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-398",
+      "b": "catalog-3ds-vc-62bc77b2d75ac221",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-798",
+      "b": "catalog-3ds-vc-62bc77b2d75ac221",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-1161",
+      "b": "catalog-3ds-vc-99cfc33c1c1c427d",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-1162",
+      "b": "catalog-3ds-vc-e2ba8b1d2fa46dad",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-632",
+      "b": "catalog-3ds-vc-8a78b533ac141ed9",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-509",
+      "b": "catalog-3ds-vc-c50a611759d4bd3e",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-605",
+      "b": "catalog-3ds-vc-23a182aa324d6b30",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-593b06d98ebb32f9",
+      "b": "catalog-new3ds-vc-657bc797733d61a9",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-363",
+      "b": "catalog-new3ds-vc-657bc797733d61a9",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-593b06d98ebb32f9",
+      "b": "gba-363",
+      "kind": "edition",
+      "sources": [
+        "https://www.nintendo.com/jp/character/zelda/history/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-203",
+      "b": "catalog-3ds-vc-e7f295bf8306a292",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-245",
+      "b": "catalog-3ds-vc-8ef31d0a9b023308",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-349",
+      "b": "catalog-3ds-vc-ec2a8a2ca21e67f9",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-432",
+      "b": "catalog-3ds-vc-7ec0b5daa858a6f2",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-493",
+      "b": "catalog-3ds-vc-9a36a5b0db25af42",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-1093",
+      "b": "catalog-3ds-vc-ecc2d4b14b5290b9",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gb-1215",
+      "b": "catalog-3ds-vc-b8537b53611a892f",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-8986362943f27774",
+      "b": "gba-250",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-4361c6d697ebb5f9",
+      "b": "catalog-new3ds-vc-aebc19505d494d61",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-e1650ca43c35260d",
+      "b": "catalog-new3ds-vc-be03485936725464",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-3a7b27280882e32a",
+      "b": "catalog-ss-b30916aeba9ca422",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-e8752dcab861a0cf",
+      "b": "catalog-ss-4ff7282331530d6e",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-83ef25ed2a9a72aa",
+      "b": "catalog-ss-a41ac76bf50ed61b",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-ab1be8cb4386d82b",
+      "b": "catalog-ps2-82270783660b71a0",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-bfbd3b18b602d06d",
+      "b": "catalog-new3ds-vc-45fd021f0efb1fff",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-df4ff6968baefc97",
+      "b": "catalog-3ds-vc-08e80751f202d751",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-20f071384178f4e4",
+      "b": "catalog-3ds-vc-e8b5ff6cff300fba",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-177054be5320c999",
+      "b": "catalog-3ds-vc-75042db4cd0fb163",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-a50fbd10d760e284",
+      "b": "catalog-3ds-vc-54d9940992605334",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-856e1b48f0f1afd2",
+      "b": "catalog-3ds-vc-0f7dbfba1c737335",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-5a887fc2f7f61d83",
+      "b": "catalog-3ds-vc-21948a8df6a1aca8",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/ir/data/pdf/annual/2018/annual_2018_05.pdf"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-862ba194aac32f1a",
+      "b": "catalog-new3ds-vc-323774e4c37c4946",
+      "kind": "edition",
+      "sources": [
+        "https://www.famitsu.com/game/title/6477/page/1"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-3053f6b06c81e067",
+      "b": "catalog-ps-862ba194aac32f1a",
+      "kind": "edition",
+      "sources": [
+        "https://www.famitsu.com/game/title/6477/page/1"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-862ba194aac32f1a",
+      "b": "catalog-ss-fc2b629f4ee7c5fe",
+      "kind": "edition",
+      "sources": [
+        "https://www.famitsu.com/game/title/6477/page/1"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-3053f6b06c81e067",
+      "b": "catalog-new3ds-vc-323774e4c37c4946",
+      "kind": "edition",
+      "sources": [
+        "https://www.famitsu.com/game/title/6477/page/1"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ss-fc2b629f4ee7c5fe",
+      "b": "catalog-new3ds-vc-323774e4c37c4946",
+      "kind": "edition",
+      "sources": [
+        "https://www.famitsu.com/game/title/6477/page/1"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-sfc-3053f6b06c81e067",
+      "b": "catalog-ss-fc2b629f4ee7c5fe",
+      "kind": "edition",
+      "sources": [
+        "https://www.famitsu.com/game/title/6477/page/1"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-5d28a0f52f708860",
+      "b": "catalog-n64-fb3e5683ef0fd699",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/support/faq/platform_psp_rockdash_036901.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-5d28a0f52f708860",
+      "b": "catalog-psp-752b2f43913e905a",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/support/faq/platform_psp_rockdash_036901.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-n64-fb3e5683ef0fd699",
+      "b": "catalog-psp-752b2f43913e905a",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/support/faq/platform_psp_rockdash_036901.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-ffc8ac70ea276593",
+      "b": "catalog-3ds-vc-e25545dfe0ee6851",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-cb86b0feb41ccc9a",
+      "b": "catalog-3ds-vc-c0ef0f53734f7d4f",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-6b1971da40ed358a",
+      "b": "catalog-3ds-vc-26aa9f6cc6f9e3b6",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-c4db9ec0958dd492",
+      "b": "catalog-3ds-vc-4ba49a68f17b387e",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-bd18d7230b754e5e",
+      "b": "catalog-3ds-vc-0d9550592c0abcb7",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-918c28b2242829d6",
+      "b": "catalog-ps2-7ae6f37573259c05",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-95e1d91cbfddec79",
+      "b": "catalog-ps2-295dfb4ae191564e",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-8dec620db33e38ce",
+      "b": "catalog-ps2-d70d188c67342690",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-1ed71fef235cb3ff",
+      "b": "catalog-ps2-f7c76c5e5a32c64f",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/gametitle/SonicHeroes.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-55b94dc041a6bb58",
+      "b": "catalog-ps3-149ea0299dff9432",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/gametitle/SonicAdventure.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-6a917dcb98437e00",
+      "b": "catalog-ps3-149ea0299dff9432",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/gametitle/SonicAdventure.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-55b94dc041a6bb58",
+      "b": "catalog-gc-6a917dcb98437e00",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/gametitle/SonicAdventure.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-887ecb60f09b0ab8",
+      "b": "catalog-ps3-969801da2316df3e",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-91da38d91a4cc3d5",
+      "b": "catalog-ps3-969801da2316df3e",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-887ecb60f09b0ab8",
+      "b": "catalog-gc-91da38d91a4cc3d5",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-6447e921ff4a6408",
+      "b": "catalog-3ds-vc-d8b2be6c0c605d64",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-9ecef1dc9ec5bc18",
+      "b": "catalog-3ds-vc-0b6e6ac16a45ee78",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "md-127",
+      "b": "catalog-3ds-e991fd4330af4069",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "md-258",
+      "b": "catalog-ps3-726befeb6a51b3fb",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "md-258",
+      "b": "catalog-3ds-0b0d8a0452e9025d",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps3-726befeb6a51b3fb",
+      "b": "catalog-3ds-0b0d8a0452e9025d",
+      "kind": "edition",
+      "sources": [
+        "https://sonic.sega.jp/SonicChannel/history/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "ws-005",
+      "b": "ngp-029",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "md-494",
+      "b": "ngp-029",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-719a0e559422b563",
+      "b": "ngp-029",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "ngp-029",
+      "b": "catalog-3ds-vc-8213c484f807b097",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ss-4b7ab5fa2dea87ae",
+      "b": "ngp-029",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "md-494",
+      "b": "ws-005",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-719a0e559422b563",
+      "b": "ws-005",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "ws-005",
+      "b": "catalog-3ds-vc-8213c484f807b097",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ss-4b7ab5fa2dea87ae",
+      "b": "ws-005",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "md-494",
+      "b": "catalog-gg-719a0e559422b563",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "md-494",
+      "b": "catalog-3ds-vc-8213c484f807b097",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "md-494",
+      "b": "catalog-ss-4b7ab5fa2dea87ae",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-719a0e559422b563",
+      "b": "catalog-3ds-vc-8213c484f807b097",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-719a0e559422b563",
+      "b": "catalog-ss-4b7ab5fa2dea87ae",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ss-4b7ab5fa2dea87ae",
+      "b": "catalog-3ds-vc-8213c484f807b097",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-356c54e1bb69a355",
+      "b": "gba-587",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-12ea1db9cdecf17c",
+      "b": "gba-587",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-587",
+      "b": "catalog-nds-790556394a7ef7ef",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-587",
+      "b": "catalog-psp-c80eb4a7048d01a6",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-a57c914a112f5fbe",
+      "b": "gba-587",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-356c54e1bb69a355",
+      "b": "catalog-gc-12ea1db9cdecf17c",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-356c54e1bb69a355",
+      "b": "catalog-nds-790556394a7ef7ef",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-356c54e1bb69a355",
+      "b": "catalog-psp-c80eb4a7048d01a6",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-356c54e1bb69a355",
+      "b": "catalog-dc-a57c914a112f5fbe",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-12ea1db9cdecf17c",
+      "b": "catalog-nds-790556394a7ef7ef",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-12ea1db9cdecf17c",
+      "b": "catalog-psp-c80eb4a7048d01a6",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-a57c914a112f5fbe",
+      "b": "catalog-gc-12ea1db9cdecf17c",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-nds-790556394a7ef7ef",
+      "b": "catalog-psp-c80eb4a7048d01a6",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-a57c914a112f5fbe",
+      "b": "catalog-nds-790556394a7ef7ef",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-a57c914a112f5fbe",
+      "b": "catalog-psp-c80eb4a7048d01a6",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-572b5fea90c4f401",
+      "b": "catalog-psp-2650652bcca1c5a2",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-572b5fea90c4f401",
+      "b": "catalog-nds-f5f4706c01f7e5a1",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-psp-2650652bcca1c5a2",
+      "b": "catalog-nds-f5f4706c01f7e5a1",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-nds-77f0528a0bc4112d",
+      "b": "catalog-psp-44552aeccf535ee0",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-a444e973d0e1788d",
+      "b": "catalog-3ds-vc-3334986d50eea245",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-4fa49d2bc3e4f5ef",
+      "b": "catalog-3ds-vc-98f2b7a2cfe324e5",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gg-2d401512894931c1",
+      "b": "catalog-3ds-vc-ed0a681ecae617fc",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-nds-302170b3e4439b13",
+      "b": "catalog-psp-3cde1165b8f07596",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/puyopuyo%21.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-nds-302170b3e4439b13",
+      "b": "catalog-ps2-7b975879965ea4db",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/puyopuyo%21.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-7b975879965ea4db",
+      "b": "catalog-psp-3cde1165b8f07596",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/portal/series/puyopuyo%21.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-3ds-48daed7bba662b4a",
+      "b": "catalog-psv-ba96a724cd62efe4",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/puyopuyotetris/spec/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-3ds-48daed7bba662b4a",
+      "b": "catalog-ps3-dba10bb46398ccd8",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/puyopuyotetris/spec/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps3-dba10bb46398ccd8",
+      "b": "catalog-psv-ba96a724cd62efe4",
+      "kind": "edition",
+      "sources": [
+        "https://puyo.sega.jp/puyopuyotetris/spec/index.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-8d8e6fa230288411",
+      "b": "catalog-psp-b7d446d9cb2b7c5f",
+      "kind": "edition",
+      "sources": [
+        "https://tales-ch.jp/titles/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-08afa4b8e987734c",
+      "b": "catalog-psp-8b45f6cd5a4e435e",
+      "kind": "edition",
+      "sources": [
+        "https://tales-ch.jp/titles/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-5990e75aee6c7530",
+      "b": "catalog-ps2-0c512a5f89c2629f",
+      "kind": "edition",
+      "sources": [
+        "https://tales-ch.jp/titles/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-2523a164ee041feb",
+      "b": "catalog-3ds-ec97396497507d40",
+      "kind": "edition",
+      "sources": [
+        "https://tales-ch.jp/titles/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-06b300a97e7b3528",
+      "b": "catalog-psp-7b5da8076837857a",
+      "kind": "edition",
+      "sources": [
+        "https://www.bandainamcoent.co.jp/cs/list/talesofrebirth_psp/product/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-fafe2fa29b4a37af",
+      "b": "catalog-ps2-e052f5ecea3c19cb",
+      "kind": "remake",
+      "sources": [
+        "https://www.bandainamcoent.co.jp/cs/list/talesofdestiny_ps2/product/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-fafe2fa29b4a37af",
+      "b": "catalog-ps2-28f89e0777e4ace4",
+      "kind": "remake",
+      "sources": [
+        "https://www.bandainamcoent.co.jp/cs/list/talesofdestiny_ps2/product/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-448f3a1e46ac8af8",
+      "b": "catalog-ss-a92522c287419f10",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-448f3a1e46ac8af8",
+      "b": "catalog-gc-7084266a339a6f8b",
+      "kind": "remake",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ss-a92522c287419f10",
+      "b": "catalog-gc-7084266a339a6f8b",
+      "kind": "remake",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-1a60442d1a9cfd02",
+      "b": "catalog-n64-1db422e296848a82",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-1a60442d1a9cfd02",
+      "b": "catalog-gc-40f6612b3386a099",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-1a60442d1a9cfd02",
+      "b": "catalog-dc-a12d34bd899359f6",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-n64-1db422e296848a82",
+      "b": "catalog-gc-40f6612b3386a099",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-a12d34bd899359f6",
+      "b": "catalog-n64-1db422e296848a82",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-a12d34bd899359f6",
+      "b": "catalog-gc-40f6612b3386a099",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-e031745d39bcbac3",
+      "b": "catalog-gc-946d65d708b96d5c",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-e031745d39bcbac3",
+      "b": "catalog-dc-dd0689fdd45a59de",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-dd0689fdd45a59de",
+      "b": "catalog-gc-946d65d708b96d5c",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-60a3402c6cebf2bf",
+      "b": "catalog-ps2-24c7da106ec29d21",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-192ebe57f18342a4",
+      "b": "catalog-gc-0efa2e924a62dd07",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-cc49aa6d25739b60",
+      "b": "catalog-ps2-192ebe57f18342a4",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-dc-cc49aa6d25739b60",
+      "b": "catalog-gc-0efa2e924a62dd07",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps3-c8e35d88ab668045",
+      "b": "catalog-psv-3edd9bd63043ead2",
+      "kind": "edition",
+      "sources": [
+        "https://game.capcom.com/residentevil/ja/lineup.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-gc-7084266a339a6f8b",
+      "b": "catalog-ps3-0856e6ee311abbff",
+      "kind": "edition",
+      "sources": [
+        "https://www.capcom.co.jp/support/faq/platform_ps3_biohd_0134652.html"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "pce-096",
+      "b": "catalog-ps3-2d909647d1b874b1",
+      "kind": "edition",
+      "sources": [
+        "https://www.falcom.co.jp/ys"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "pce-096",
+      "b": "catalog-psp-88625f7877d120f9",
+      "kind": "edition",
+      "sources": [
+        "https://www.falcom.co.jp/ys"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "pce-241",
+      "b": "catalog-ps3-2d909647d1b874b1",
+      "kind": "edition",
+      "sources": [
+        "https://www.falcom.co.jp/ys"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "pce-241",
+      "b": "catalog-psp-88625f7877d120f9",
+      "kind": "edition",
+      "sources": [
+        "https://www.falcom.co.jp/ys"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps3-2d909647d1b874b1",
+      "b": "catalog-psp-88625f7877d120f9",
+      "kind": "edition",
+      "sources": [
+        "https://www.falcom.co.jp/ys"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "pce-534",
+      "b": "catalog-psp-622f29a9317bb752",
+      "kind": "edition",
+      "sources": [
+        "https://www.falcom.co.jp/ys"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-3d48fab52401d7ec",
+      "b": "catalog-psp-aa11399d79a6cf21",
+      "kind": "edition",
+      "sources": [
+        "https://www.falcom.co.jp/ys"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-c809a29176838c57",
+      "b": "catalog-psp-7826ec0758f0ce1c",
+      "kind": "edition",
+      "sources": [
+        "https://p-ch.jp/p30th/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-6e3fd87b72db1a99",
+      "b": "catalog-psp-49384ec1962fb35e",
+      "kind": "edition",
+      "sources": [
+        "https://p-ch.jp/p30th/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps-065590ab876a24aa",
+      "b": "catalog-psp-308de8cf670f1504",
+      "kind": "edition",
+      "sources": [
+        "https://p-ch.jp/p30th/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-6ff65a1c9447da55",
+      "b": "catalog-psp-ebb197ce499a6941",
+      "kind": "edition",
+      "sources": [
+        "https://p-ch.jp/p30th/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-ps2-b0412e1c17932d0e",
+      "b": "catalog-psv-bcad0c6c817ec5b1",
+      "kind": "edition",
+      "sources": [
+        "https://p-ch.jp/p30th/"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-079",
+      "b": "catalog-nds-be69cb9db03248f5",
+      "kind": "edition",
+      "sources": [
+        "https://store.captown.capcom.com/collections/ace-attorney"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-273",
+      "b": "catalog-nds-73ed73c6cf7594bd",
+      "kind": "edition",
+      "sources": [
+        "https://store.captown.capcom.com/collections/ace-attorney"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "gba-499",
+      "b": "catalog-nds-dbd45e85aec3ce4a",
+      "kind": "edition",
+      "sources": [
+        "https://store.captown.capcom.com/collections/ace-attorney"
+      ],
+      "managedBy": "build_game_relations"
+    },
+    {
+      "a": "catalog-nds-ced5a9905c434267",
+      "b": "catalog-3ds-4afeb13e21b2cea2",
+      "kind": "edition",
+      "sources": [
+        "https://store.captown.capcom.com/collections/ace-attorney"
+      ],
+      "managedBy": "build_game_relations"
     }
   ]
 }

@@ -18,7 +18,7 @@ def apply_relations(data, relationships):
     for link in relationships['links']:
         pair=frozenset((link['a'],link['b']))
         assert len(pair)==2 and pair<=ids and pair not in pairs
-        assert link['kind'] in {'port','remake','collection'}
+        assert link['kind'] in {'port','edition','remake','collection'}
         assert link['sources'] and all(urlparse(s).scheme=='https' for s in link['sources'])
         pairs.add(pair)
     result=copy.deepcopy(data)
