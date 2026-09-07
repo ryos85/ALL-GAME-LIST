@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-07",
+  "scope": "先行登録。クロノとサクラ大戦の本編を中心に、確認済みの関係だけを登録。",
+  "series": [
+    {
+      "id": "chrono",
+      "name": "クロノ",
+      "games": [
+        "catalog-sfc-d4ef2529f9f75e40",
+        "catalog-ps-2dae36451ddf0e1b",
+        "catalog-nds-9a2bee9dbe562e08",
+        "catalog-ps-72e8d4773b2cd614"
+      ],
+      "sources": [
+        "https://www.jp.square-enix.com/company/ja/news/2008/html/4b2237fc7c19d76b82218524432bdcc2.html",
+        "https://www.famitsu.com/news/202311/18324209.html"
+      ]
+    },
+    {
+      "id": "sakura",
+      "name": "サクラ大戦",
+      "games": [
+        "catalog-ss-e581f1cd8b43f7e4",
+        "catalog-dc-cd145d40459f3477",
+        "catalog-ss-a05834f5e5a0835f",
+        "catalog-dc-46ef2f719c10943a",
+        "catalog-dc-502a5020b78ffaf8",
+        "catalog-ps2-68e75494e7f2dc48",
+        "catalog-dc-760ec134668b3afd",
+        "catalog-ps2-04859c68ce4b7c96",
+        "catalog-ps2-d05c965b041dbdf1",
+        "catalog-psp-37627349bcb4fdb5"
+      ],
+      "sources": [
+        "https://sakura-taisen.com/archives/game/nenpyou/index.html",
+        "https://sakura-taisen.com/archives/game/3ps2/system.html",
+        "https://sakura-taisen.com/archives/game/atsuki/faq.html",
+        "https://sakura-taisen.com/archives/game/psp/faq_frame.html"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "a": "catalog-sfc-d4ef2529f9f75e40",
+      "b": "catalog-ps-2dae36451ddf0e1b",
+      "kind": "port",
+      "sources": [
+        "https://www.procyon-studio.co.jp/library/detail/019.html"
+      ]
+    },
+    {
+      "a": "catalog-sfc-d4ef2529f9f75e40",
+      "b": "catalog-nds-9a2bee9dbe562e08",
+      "kind": "port",
+      "sources": [
+        "https://www.jp.square-enix.com/company/ja/news/2008/html/4b2237fc7c19d76b82218524432bdcc2.html"
+      ]
+    },
+    {
+      "a": "catalog-ps-2dae36451ddf0e1b",
+      "b": "catalog-nds-9a2bee9dbe562e08",
+      "kind": "port",
+      "sources": [
+        "https://www.jp.square-enix.com/company/ja/news/2008/html/4b2237fc7c19d76b82218524432bdcc2.html",
+        "https://www.procyon-studio.co.jp/library/detail/019.html"
+      ]
+    },
+    {
+      "a": "catalog-ss-e581f1cd8b43f7e4",
+      "b": "catalog-dc-cd145d40459f3477",
+      "kind": "port",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/nenpyou/index.html"
+      ]
+    },
+    {
+      "a": "catalog-ss-a05834f5e5a0835f",
+      "b": "catalog-dc-46ef2f719c10943a",
+      "kind": "port",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/nenpyou/index.html"
+      ]
+    },
+    {
+      "a": "catalog-dc-502a5020b78ffaf8",
+      "b": "catalog-ps2-68e75494e7f2dc48",
+      "kind": "port",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/3ps2/system.html"
+      ]
+    },
+    {
+      "a": "catalog-ss-e581f1cd8b43f7e4",
+      "b": "catalog-ps2-04859c68ce4b7c96",
+      "kind": "remake",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/atsuki/faq.html",
+        "https://sakura-taisen.com/archives/game/nenpyou/index.html"
+      ]
+    },
+    {
+      "a": "catalog-dc-cd145d40459f3477",
+      "b": "catalog-ps2-04859c68ce4b7c96",
+      "kind": "remake",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/atsuki/faq.html",
+        "https://sakura-taisen.com/archives/game/nenpyou/index.html"
+      ]
+    },
+    {
+      "a": "catalog-ss-e581f1cd8b43f7e4",
+      "b": "catalog-psp-37627349bcb4fdb5",
+      "kind": "collection",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/psp/faq_frame.html"
+      ]
+    },
+    {
+      "a": "catalog-dc-cd145d40459f3477",
+      "b": "catalog-psp-37627349bcb4fdb5",
+      "kind": "collection",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/psp/faq_frame.html"
+      ]
+    },
+    {
+      "a": "catalog-ss-a05834f5e5a0835f",
+      "b": "catalog-psp-37627349bcb4fdb5",
+      "kind": "collection",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/psp/faq_frame.html"
+      ]
+    },
+    {
+      "a": "catalog-dc-46ef2f719c10943a",
+      "b": "catalog-psp-37627349bcb4fdb5",
+      "kind": "collection",
+      "sources": [
+        "https://sakura-taisen.com/archives/game/psp/faq_frame.html"
+      ]
+    }
+  ]
+}
