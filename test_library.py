@@ -1,6 +1,7 @@
 """Storage, API isolation and encryption checks using disposable data only."""
 import base64
 import copy
+import gzip
 import http.client
 import json
 import shutil
@@ -78,7 +79,15 @@ class LibraryTests(unittest.TestCase):
         iv=base64.b64decode(envelope['iv']); cipher=base64.b64decode(envelope['ciphertext'])
         key=base64.urlsafe_b64decode(app.key_string()+'=')
         decoded=AESGCM(key).decrypt(iv,cipher,app.AAD)
-        self.assertEqual(json.loads(decoded),self.initial)
+        self.assertEqual(envelope['schemaVersion'],2)
+        self.assertEqual(json.loads(gzip.decompress(decoded)),self.initial)
+        self.assertLess(len(cipher), len(json.dumps(self.initial).encode()) // 4)
+        self.assertEqual(app.decode_export(envelope,key),self.initial)
+        legacy_iv=secrets.token_bytes(12)
+        legacy={'schemaVersion':1,'algorithm':'AES-256-GCM',
+                'iv':base64.b64encode(legacy_iv).decode(),
+                'ciphertext':base64.b64encode(AESGCM(key).encrypt(legacy_iv,json.dumps(self.initial).encode(),app.AAD)).decode()}
+        self.assertEqual(app.decode_export(legacy,key),self.initial)
         with self.assertRaises(InvalidTag): AESGCM(AESGCM.generate_key(bit_length=256)).decrypt(iv,cipher,app.AAD)
         with self.assertRaises(InvalidTag): AESGCM(key).decrypt(iv,cipher[:-1]+bytes([cipher[-1]^1]),app.AAD)
         public_text=''.join(f.read_text(encoding='utf-8') for f in app.PUBLIC.iterdir())
@@ -105,6 +114,14 @@ class LibraryTests(unittest.TestCase):
             cookie=first[1]['Set-Cookie'].split(';')[0]
             headers={'Cookie':cookie,'Origin':f'http://127.0.0.1:{port}','Content-Type':'application/json'}
             self.assertEqual(req('GET','/api/library',headers={'Cookie':cookie})[0],200)
+            compressed_headers={'Cookie':cookie,'Accept-Encoding':'gzip'}
+            packed=req('GET','/api/library',headers=compressed_headers)
+            self.assertEqual(packed[1]['Content-Encoding'],'gzip')
+            self.assertEqual(json.loads(gzip.decompress(packed[2])),self.initial)
+            self.assertEqual(req('GET','/api/library',headers=compressed_headers)[2],packed[2])
+            uncompressed=req('GET','/api/library',headers={'Cookie':cookie,'Accept-Encoding':'gzip;q=0'})
+            self.assertNotIn('Content-Encoding',uncompressed[1])
+            self.assertEqual(json.loads(uncompressed[2]),self.initial)
             for path in ('/library.json','/device-key.json','/../library.json','/.git/config'):
                 self.assertEqual(req('GET',path)[0],404)
             self.assertEqual(req('GET','/',headers={'Host':'attacker.example'})[0],403)
@@ -112,6 +129,9 @@ class LibraryTests(unittest.TestCase):
             self.assertEqual(req('POST','/api/update',payload,{**headers,'Origin':'https://attacker.example'})[0],403)
             self.assertEqual(req('POST','/api/update',payload,headers)[0],200)
             self.assertTrue(app.library()['games'][0]['wanted'])
+            refreshed=req('GET','/api/library',headers=compressed_headers)
+            self.assertNotEqual(refreshed[2],packed[2])
+            self.assertEqual(json.loads(gzip.decompress(refreshed[2])),app.library())
         finally:
             server.shutdown();server.server_close();thread.join()
 

@@ -2,6 +2,8 @@
 import argparse
 import base64
 import datetime
+import functools
+import gzip
 import http.cookies
 import json
 import os
@@ -56,6 +58,18 @@ def settings():
     path = ROOT / 'local-settings.json'
     return read_json(path) if path.exists() else {'remote':'','branch':'main','pageUrl':''}
 
+@functools.lru_cache(maxsize=3)
+def compressed_file(path, modified_ns, size):
+    # File identity is part of the key so external imports and edits invalidate it.
+    return gzip.compress(path.read_bytes(), compresslevel=1, mtime=0)
+
+def decode_export(envelope, key):
+    plain = AESGCM(key).decrypt(base64.b64decode(envelope['iv']),
+                               base64.b64decode(envelope['ciphertext']), AAD)
+    if envelope.get('compression') == 'gzip':
+        plain = gzip.decompress(plain)
+    return json.loads(plain)
+
 def editor_template():
     return (ROOT / 'app.html').read_text(encoding='utf-8').replace('/*LOCAL_MODE*/false','true')
 
@@ -66,17 +80,17 @@ def export_viewer():
     if (PUBLIC/'index.html').exists() and (PUBLIC/'library.enc.json').exists():
         try:
             previous = read_json(PUBLIC/'library.enc.json')
-            decoded = AESGCM(key).decrypt(base64.b64decode(previous['iv']),
-                                           base64.b64decode(previous['ciphertext']), AAD)
-            if json.loads(decoded) == data and (PUBLIC/'index.html').read_text(encoding='utf-8') == template:
+            decoded = decode_export(previous, key)
+            if previous.get('schemaVersion') == 2 and decoded == data and (PUBLIC/'index.html').read_text(encoding='utf-8') == template:
                 return data
         except (ValueError, KeyError, TypeError, OSError, InvalidTag):
             pass  # An invalid old export is replaced from the local saved library.
     iv = secrets.token_bytes(12)
-    encrypted = AESGCM(key).encrypt(iv,json.dumps(data,ensure_ascii=False).encode(),AAD)
+    packed = gzip.compress(json.dumps(data,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)
+    encrypted = AESGCM(key).encrypt(iv,packed,AAD)
     PUBLIC.mkdir(exist_ok=True)
     (PUBLIC / 'index.html').write_text(template,encoding='utf-8')
-    write_atomic(PUBLIC / 'library.enc.json', {'schemaVersion':1,'algorithm':'AES-256-GCM',
+    write_atomic(PUBLIC / 'library.enc.json', {'schemaVersion':2,'algorithm':'AES-256-GCM','compression':'gzip',
                  'iv':base64.b64encode(iv).decode(),'ciphertext':base64.b64encode(encrypted).decode()})
     return data
 
@@ -154,11 +168,14 @@ class Handler(BaseHTTPRequestHandler):
         except (KeyError,http.cookies.CookieError):
             return False
 
-    def send_bytes(self,content,ctype='application/json; charset=utf-8',status=200,cookie=False):
+    def send_bytes(self,content,ctype='application/json; charset=utf-8',status=200,cookie=False,compressed=False):
         self.send_response(status)
         self.send_header('Content-Type',ctype)
         self.send_header('Content-Length',str(len(content)))
         self.send_header('Cache-Control','no-store')
+        self.send_header('Vary','Accept-Encoding')
+        if compressed:
+            self.send_header('Content-Encoding','gzip')
         self.send_header('X-Content-Type-Options','nosniff')
         self.send_header('Referrer-Policy','no-referrer')
         self.send_header('X-Frame-Options','DENY')
@@ -169,6 +186,17 @@ class Handler(BaseHTTPRequestHandler):
 
     def json_response(self,obj,status=200):
         self.send_bytes(json.dumps(obj,ensure_ascii=False).encode(),'application/json; charset=utf-8',status)
+
+    def library_response(self):
+        encodings = self.headers.get('Accept-Encoding','').lower().split(',')
+        use_gzip = any(e.split(';')[0].strip() == 'gzip' and
+                       not any(p.strip() in ('q=0','q=0.0','q=0.00','q=0.000') for p in e.split(';')[1:])
+                       for e in encodings)
+        with LOCK:
+            path = ROOT/'library.json'
+            stat = path.stat()
+            content = compressed_file(path,stat.st_mtime_ns,stat.st_size) if use_gzip else path.read_bytes()
+        self.send_bytes(content,compressed=use_gzip)
 
     def do_GET(self):
         if not self.host_valid(): return self.json_response({'error':'Host is not allowed'},403)
@@ -182,7 +210,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_bytes(f.read_bytes(),'application/json; charset=utf-8' if f.suffix=='.json' else 'text/html; charset=utf-8')
         if path.startswith('/api/') and not self.session_valid():
             return self.json_response({'error':'PC画面を開き直してください。'},403)
-        if path == '/api/library': return self.json_response(library())
+        if path == '/api/library': return self.library_response()
         if path == '/api/info':
             cfg = settings()
             return self.json_response({'publishedRevision':cfg.get('publishedRevision',-1),'pageConfigured':bool(cfg.get('pageUrl'))})
