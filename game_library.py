@@ -16,6 +16,7 @@ import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+from cryptography.exceptions import InvalidTag
 
 ROOT = Path(__file__).resolve().parent
 PUBLIC = ROOT / 'スマホ閲覧ページ'
@@ -61,10 +62,20 @@ def editor_template():
 def export_viewer():
     data = library()
     key = base64.urlsafe_b64decode(key_string()+'=')
+    template = (ROOT / 'app.html').read_text(encoding='utf-8')
+    if (PUBLIC/'index.html').exists() and (PUBLIC/'library.enc.json').exists():
+        try:
+            previous = read_json(PUBLIC/'library.enc.json')
+            decoded = AESGCM(key).decrypt(base64.b64decode(previous['iv']),
+                                           base64.b64decode(previous['ciphertext']), AAD)
+            if json.loads(decoded) == data and (PUBLIC/'index.html').read_text(encoding='utf-8') == template:
+                return data
+        except (ValueError, KeyError, TypeError, OSError, InvalidTag):
+            pass  # An invalid old export is replaced from the local saved library.
     iv = secrets.token_bytes(12)
     encrypted = AESGCM(key).encrypt(iv,json.dumps(data,ensure_ascii=False).encode(),AAD)
     PUBLIC.mkdir(exist_ok=True)
-    (PUBLIC / 'index.html').write_text((ROOT / 'app.html').read_text(encoding='utf-8'),encoding='utf-8')
+    (PUBLIC / 'index.html').write_text(template,encoding='utf-8')
     write_atomic(PUBLIC / 'library.enc.json', {'schemaVersion':1,'algorithm':'AES-256-GCM',
                  'iv':base64.b64encode(iv).decode(),'ciphertext':base64.b64encode(encrypted).decode()})
     return data
@@ -184,15 +195,20 @@ class Handler(BaseHTTPRequestHandler):
         return self.json_response({'error':'見つかりません。'},404)
 
     def do_POST(self):
+        try:
+            length = int(self.headers.get('Content-Length','0'))
+        except ValueError:
+            return self.json_response({'error':'リクエストの大きさが不正です。'},400)
+        if not 0 < length <= 25000:
+            return self.json_response({'error':'リクエストの大きさが不正です。'},400)
+        raw = self.rfile.read(length)
         if not self.host_valid() or not self.session_valid():
             return self.json_response({'error':'PC画面を開き直してください。'},403)
         origin = self.headers.get('Origin','')
         if origin != f'http://{self.headers.get("Host")}':
             return self.json_response({'error':'外部の画面からは変更できません。'},403)
         try:
-            length = int(self.headers.get('Content-Length','0'))
-            if not 0 < length <= 25000: raise ValueError('リクエストの大きさが不正です。')
-            payload = json.loads(self.rfile.read(length))
+            payload = json.loads(raw)
             if not isinstance(payload,dict): raise ValueError('データ形式が不正です。')
             if self.path == '/api/update': return self.json_response(update_record(payload))
             if self.path == '/api/export':

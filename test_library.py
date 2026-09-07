@@ -86,6 +86,9 @@ class LibraryTests(unittest.TestCase):
         self.assertNotIn(app.key_string(),public_text)
         first_iv=envelope['iv']
         app.export_viewer()
+        self.assertEqual(first_iv,app.read_json(app.PUBLIC/'library.enc.json')['iv'])
+        app.update_record({'id':'ngp-001','revision':self.initial['revision'],'changes':{'wanted':True}})
+        app.export_viewer()
         self.assertNotEqual(first_iv,app.read_json(app.PUBLIC/'library.enc.json')['iv'])
 
     def test_http_access_controls_and_update(self):
